@@ -11,16 +11,16 @@
   <meta name="theme-color" content="#1F2A44">
 
   <!-- === 1. SEO AVANZADO Y REDES SOCIALES === -->
-  <link rel="canonical" href="https://hlt.netlify.app/">
+  <link rel="canonical" href="https://hltimportaciones.netlify.app/">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
   <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://hlt.netlify.app/">
+  <meta property="og:url" content="https://hltimportaciones.netlify.app/">
   <meta property="og:title" content="HLT Importaciones | Maquinaria Profesional para Cacao y Chocolate">
   <meta property="og:description"
     content="Representación oficial de SEMMCO Cocoa en Colombia. Maquinaria industrial para tostado, molienda, temperado, enrobing y alcalinización. Asesoría experta de Ing. Juan Román Pacheco.">
-  <meta property="og:image" content="https://hlt.netlify.app/logo-hero.png">
+  <meta property="og:image" content="https://hltimportaciones.netlify.app/logo-hero.png">
   <meta property="og:locale" content="es_CO">
 
   <!-- Twitter Card -->
@@ -28,7 +28,7 @@
   <meta name="twitter:title" content="HLT Importaciones | Maquinaria Profesional para Cacao y Chocolate">
   <meta name="twitter:description"
     content="Representación oficial de SEMMCO Cocoa en Colombia. Asesoría experta para proyectos Bean-to-Bar.">
-  <meta name="twitter:image" content="https://hlt.netlify.app/logo-hero.png">
+  <meta name="twitter:image" content="https://hltimportaciones.netlify.app/logo-hero.png">
 
   <!-- Metadatos de Negocio Local -->
   <meta name="geo.region" content="CO">
@@ -56,8 +56,8 @@
     "@type": "Organization",
     "name": "HLT Importaciones y Asesoría",
     "alternateName": "HLT Importaciones",
-    "url": "https://hlt.netlify.app/",
-    "logo": "https://hlt.netlify.app/logo.png",
+    "url": "https://hltimportaciones.netlify.app/",
+    "logo": "https://hltimportaciones.netlify.app/logo.png",
     "description": "Representación oficial de SEMMCO Cocoa en Colombia. Maquinaria profesional para la transformación del cacao y producción de chocolate.",
     "founder": {
       "@type": "Person",
@@ -76,7 +76,8 @@
       "availableLanguage": "Spanish"
     },
     "sameAs": [
-      "https://wa.me/573112581129"
+      "https://wa.me/573112581129", 
+      "https://www.instagram.com/hltimportaciones"
     ]
   }
   </script>
@@ -86,10 +87,10 @@
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "HLT Importaciones",
-    "url": "https://hlt.netlify.app/",
+    "url": "https://hltimportaciones.netlify.app/",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://hlt.netlify.app/?s={search_term_string}",
+      "target": "https://hltimportaciones.netlify.app/?s={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   }
@@ -1731,6 +1732,65 @@
         height: 24px;
       }
     }
+
+    /* ============================================================
+       NUEVO: Icono de Instagram en el Header
+       ============================================================ */
+    .nav-instagram {
+      color: var(--azul-profundo);
+      font-size: 1.3rem;
+      transition: all 0.25s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.4rem;
+      margin-right: 0.5rem;
+      border-radius: 50%;
+    }
+
+    .nav-instagram:hover {
+      color: var(--dorado-oscuro);
+      background: var(--crema-oscura);
+      transform: translateY(-2px);
+    }
+
+    /* ============================================================
+       NUEVO: Redes Sociales en el Footer
+       ============================================================ */
+    .footer-socials {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-socials a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--cacao-suave);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+      padding: 0.5rem 1rem;
+      border-radius: 40px;
+      border: 1px solid var(--borde-suave);
+      background: var(--blanco);
+    }
+
+    .footer-socials a:hover {
+      color: var(--azul-profundo);
+      border-color: var(--dorado);
+      box-shadow: 0 4px 10px rgba(31, 42, 68, 0.08);
+    }
+
+    .footer-socials a i {
+      font-size: 1.1rem;
+      color: #E1306C;
+      /* Color oficial de Instagram */
+    }
   </style>
 </head>
 
@@ -1820,6 +1880,11 @@
           <a href="#faq">FAQ</a>
           <a href="#contacto">Contacto</a>
         </div>
+        <!-- NUEVO: Enlace a Instagram en el Header -->
+        <a href="https://www.instagram.com/hltimportaciones" target="_blank" rel="noopener" class="nav-instagram"
+          aria-label="Instagram de HLT Importaciones">
+          <i class="fab fa-instagram"></i>
+        </a>
         <div class="cart-icon" id="cartIcon" aria-label="Abrir carrito">
           <i class="fas fa-shopping-cart fa-lg" style="color: var(--azul-profundo);"></i>
           <span id="cartCounter" class="cart-count">0</span>
@@ -2283,6 +2348,13 @@
         </div>
       </div>
       <p>Consultoría especializada en compra y servicio técnico de maquinaria para la transformación del cacao.</p>
+      <!-- NUEVO: Redes Sociales en el Footer -->
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/hltimportaciones" target="_blank" rel="noopener"
+          aria-label="Instagram de HLT Importaciones">
+          <i class="fab fa-instagram"></i> @hltimportaciones
+        </a>
+      </div>
       <p style="margin-top: 0.6rem;">© <span id="year"></span> HLT Importaciones. Todos los derechos reservados.</p>
     </div>
   </footer>
