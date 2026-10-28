@@ -1,0 +1,2735 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>HTL Importaciones | Maquinaria Profesional para Cacao y Chocolate</title>
+
+  <meta name="description"
+    content="Representación oficial de SEMMCO Cocoa en Colombia. Maquinaria industrial para tostado, molienda, temperado, enrobing y alcalinización. Asesoría experta de Ing. Juan Román Pacheco.">
+  <meta name="theme-color" content="#1F2A44">
+
+  <!-- === 1. SEO AVANZADO Y REDES SOCIALES === -->
+  <link rel="canonical" href="https://hlt.netlify.app/">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hlt.netlify.app/">
+  <meta property="og:title" content="HLT Importaciones | Maquinaria Profesional para Cacao y Chocolate">
+  <meta property="og:description"
+    content="Representación oficial de SEMMCO Cocoa en Colombia. Maquinaria industrial para tostado, molienda, temperado, enrobing y alcalinización. Asesoría experta de Ing. Juan Román Pacheco.">
+  <meta property="og:image" content="https://hlt.netlify.app/logo-hero.png">
+  <meta property="og:locale" content="es_CO">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HLT Importaciones | Maquinaria Profesional para Cacao y Chocolate">
+  <meta name="twitter:description"
+    content="Representación oficial de SEMMCO Cocoa en Colombia. Asesoría experta para proyectos Bean-to-Bar.">
+  <meta name="twitter:image" content="https://hlt.netlify.app/logo-hero.png">
+
+  <!-- Metadatos de Negocio Local -->
+  <meta name="geo.region" content="CO">
+  <meta name="geo.placename" content="Colombia">
+
+  <!-- FAVICONS -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- FUENTES E ICONOS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- === 2. DATOS ESTRUCTURADOS JSON-LD (Identidad para Google e IA) === -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "HLT Importaciones y Asesoría",
+    "alternateName": "HLT Importaciones",
+    "url": "https://hlt.netlify.app/",
+    "logo": "https://hlt.netlify.app/logo.png",
+    "description": "Representación oficial de SEMMCO Cocoa en Colombia. Maquinaria profesional para la transformación del cacao y producción de chocolate.",
+    "founder": {
+      "@type": "Person",
+      "name": "Juan Román Pacheco Halat",
+      "jobTitle": "Ingeniero Electrónico y Asesor Técnico",
+      "knowsAbout": ["Maquinaria para cacao", "Bean-to-Bar", "Automatización de líneas de chocolate"]
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Colombia"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+573112581129",
+      "contactType": "sales",
+      "availableLanguage": "Spanish"
+    },
+    "sameAs": [
+      "https://wa.me/573112581129"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "HLT Importaciones",
+    "url": "https://hlt.netlify.app/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://hlt.netlify.app/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <style>
+    /* [MANTEN TODOS TUS ESTILOS CSS AQUÍ SIN CAMBIOS] */
+    /* Por brevedad, no los repito todos, pero asegúrate de pegar el bloque <style> completo de tu versión anterior. */
+
+    /* ============================================================
+       HTL — Paleta tierra sofisticada
+       ============================================================ */
+    :root {
+      --azul-profundo: #1F2A44;
+      --azul-oscuro: #131B2E;
+      --azul-suave: #4A5B7C;
+      --dorado: #C9A961;
+      --dorado-oscuro: #A88A45;
+      --dorado-claro: #E8D5A3;
+      --crema: #FAF8F3;
+      --crema-oscura: #F0EBE0;
+      --cacao: #3D2E22;
+      --cacao-suave: #6B5A48;
+      --terracota: #B8764A;
+      --verde-wa: #3DA85F;
+      --verde-wa-oscuro: #2E8B4A;
+      --blanco: #FFFFFF;
+      --borde-suave: rgba(61, 46, 34, 0.08);
+      --sombra-suave: 0 10px 30px -14px rgba(31, 42, 68, 0.12);
+      --sombra-hover: 0 25px 45px -18px rgba(31, 42, 68, 0.2);
+      --sombra-logo: 0 4px 14px -4px rgba(31, 42, 68, 0.15);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--crema);
+      color: var(--cacao);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.85rem 1.9rem;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+      font-family: inherit;
+      letter-spacing: 0.2px;
+    }
+
+    .btn-primary {
+      background: var(--azul-profundo);
+      color: var(--crema);
+      box-shadow: 0 6px 18px rgba(31, 42, 68, 0.22);
+    }
+
+    .btn-primary:hover {
+      background: var(--azul-oscuro);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px rgba(31, 42, 68, 0.32);
+    }
+
+    .btn-wa {
+      background: var(--verde-wa);
+      color: #fff;
+      box-shadow: 0 6px 18px rgba(61, 168, 95, 0.28);
+    }
+
+    .btn-wa:hover {
+      background: var(--verde-wa-oscuro);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px rgba(61, 168, 95, 0.42);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--crema-oscura);
+      color: var(--cacao);
+      border: 1px solid var(--dorado);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.35rem 1rem;
+      border-radius: 60px;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+    }
+
+    .badge i {
+      color: var(--dorado-oscuro);
+    }
+
+    .section {
+      padding: 5rem 0;
+    }
+
+    .section-head {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 3rem;
+    }
+
+    .section-head h2 {
+      font-size: 2.3rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--azul-profundo);
+      margin: 0.8rem 0 0.6rem;
+      line-height: 1.2;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .section-head p {
+      color: var(--cacao-suave);
+      font-size: 1.05rem;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 248, 243, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--borde-suave);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 0;
+      gap: 1.5rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+      padding: 0.25rem 0;
+    }
+
+    .brand-logo {
+      width: 58px;
+      height: 58px;
+      border-radius: 14px;
+      background: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 1px solid rgba(201, 169, 97, 0.35);
+      box-shadow: 0 4px 14px -4px rgba(31, 42, 68, 0.15), 0 1px 2px rgba(31, 42, 68, 0.04), inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+      padding: 5px;
+      transition: all 0.25s ease;
+    }
+
+    .brand-logo:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px -6px rgba(31, 42, 68, 0.2), 0 1px 2px rgba(31, 42, 68, 0.06), inset 0 0 0 1px rgba(255, 255, 255, 0.9);
+      border-color: rgba(201, 169, 97, 0.55);
+    }
+
+    .brand-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .brand-logo .logo-fallback {
+      display: none;
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: 1.5rem;
+      letter-spacing: -1px;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--azul-profundo) 0%, var(--azul-profundo) 55%, var(--dorado) 55%, var(--dorado) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    .brand-text {
+      line-height: 1.15;
+    }
+
+    .brand-text strong {
+      display: block;
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--azul-profundo);
+      letter-spacing: 0.6px;
+      line-height: 1.1;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .brand-text span {
+      display: block;
+      font-size: 0.58rem;
+      font-weight: 600;
+      color: var(--cacao-suave);
+      letter-spacing: 0.9px;
+      text-transform: uppercase;
+      margin-top: 2px;
+      line-height: 1.2;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--cacao);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.92rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--dorado-oscuro);
+    }
+
+    .cart-icon {
+      position: relative;
+      cursor: pointer;
+      padding: 0.4rem;
+    }
+
+    .cart-count {
+      position: absolute;
+      top: -4px;
+      right: -6px;
+      background: var(--dorado-oscuro);
+      color: var(--crema);
+      font-size: 0.68rem;
+      font-weight: 700;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .brand-logo {
+        width: 50px;
+        height: 50px;
+        border-radius: 12px;
+        padding: 4px;
+      }
+
+      .brand-logo .logo-fallback {
+        font-size: 1.3rem;
+      }
+
+      .brand-text strong {
+        font-size: 0.95rem;
+      }
+
+      .brand-text span {
+        font-size: 0.52rem;
+        letter-spacing: 0.7px;
+      }
+    }
+
+    .hero {
+      position: relative;
+      background: radial-gradient(circle at 15% 20%, rgba(201, 169, 97, 0.16) 0%, transparent 45%), radial-gradient(circle at 85% 80%, rgba(31, 42, 68, 0.06) 0%, transparent 55%), linear-gradient(160deg, #FAF8F3 0%, #F0EBE0 100%);
+      padding: 5rem 0 6rem;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -60px;
+      left: 0;
+      right: 0;
+      height: 120px;
+      background: var(--crema);
+      border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+      transform: scaleX(1.4);
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.8px;
+      color: var(--azul-profundo);
+      margin: 1.3rem 0 1rem;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .hero h1 .highlight {
+      color: var(--dorado-oscuro);
+      position: relative;
+      display: inline-block;
+      font-style: italic;
+    }
+
+    .hero h1 .highlight::after {
+      content: '';
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+      right: 0;
+      height: 8px;
+      background: var(--dorado-claro);
+      opacity: 0.6;
+      z-index: -1;
+      border-radius: 4px;
+    }
+
+    .hero p.lead {
+      font-size: 1.1rem;
+      color: var(--cacao-suave);
+      max-width: 540px;
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2.2rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.2rem;
+    }
+
+    .hero-stats .stat strong {
+      display: block;
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--azul-profundo);
+      line-height: 1.1;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .hero-stats .stat span {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--cacao-suave);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .hero-visual {
+      position: relative;
+      background: #FFFFFF;
+      border-radius: 32px;
+      padding: 2rem;
+      box-shadow: 0 30px 60px -22px rgba(31, 42, 68, 0.18), 0 2px 6px rgba(31, 42, 68, 0.04);
+      border: 1px solid rgba(201, 169, 97, 0.22);
+    }
+
+    .hero-visual .logo-slot {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      max-height: 300px;
+      border-radius: 22px;
+      background: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      border: 1px solid rgba(201, 169, 97, 0.18);
+      overflow: hidden;
+      padding: 2rem;
+      box-shadow: inset 0 0 30px rgba(250, 248, 243, 0.8);
+    }
+
+    .hero-visual .logo-slot img {
+      max-width: 85%;
+      max-height: 85%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .hero-visual .logo-slot .logo-fallback-lg {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+      text-align: center;
+    }
+
+    .hero-visual .logo-slot .logo-fallback-lg strong {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: 3.2rem;
+      letter-spacing: -2px;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--azul-profundo) 0%, var(--azul-profundo) 55%, var(--dorado) 55%, var(--dorado) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    .hero-visual .logo-slot .logo-fallback-lg small {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--cacao-suave);
+    }
+
+    .hero-visual .logo-slot i {
+      font-size: 3.5rem;
+      color: var(--dorado);
+      opacity: 0.55;
+    }
+
+    .hero-visual .mini-badges {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.8rem;
+      margin-top: 1.3rem;
+    }
+
+    .hero-visual .mini-badges div {
+      background: var(--crema);
+      border: 1px solid var(--borde-suave);
+      border-radius: 16px;
+      padding: 0.85rem 0.7rem;
+      text-align: center;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--cacao);
+      transition: all 0.25s ease;
+    }
+
+    .hero-visual .mini-badges div:hover {
+      background: #FFFFFF;
+      border-color: rgba(201, 169, 97, 0.3);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px -8px rgba(31, 42, 68, 0.15);
+    }
+
+    .hero-visual .mini-badges i {
+      display: block;
+      font-size: 1.15rem;
+      margin-bottom: 0.35rem;
+      color: var(--dorado-oscuro);
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero-visual {
+        max-width: 420px;
+        margin: 0 auto;
+      }
+
+      .hero::after {
+        display: none;
+      }
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .product-card {
+      background: var(--blanco);
+      border-radius: 22px;
+      padding: 1.8rem;
+      border: 1px solid var(--borde-suave);
+      box-shadow: var(--sombra-suave);
+      transition: all 0.35s ease;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--dorado), var(--dorado-claro));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.35s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--sombra-hover);
+      border-color: rgba(201, 169, 97, 0.35);
+    }
+
+    .product-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .product-card .icon {
+      font-size: 1.6rem;
+      color: var(--dorado-oscuro);
+      margin-bottom: 0.8rem;
+    }
+
+    .product-card h4 {
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--azul-profundo);
+      margin-bottom: 0.55rem;
+      line-height: 1.3;
+    }
+
+    .product-card p {
+      color: var(--cacao-suave);
+      font-size: 0.88rem;
+      flex: 1;
+      margin-bottom: 1rem;
+      line-height: 1.55;
+    }
+
+    .product-card .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .product-card .meta span {
+      background: var(--crema-oscura);
+      color: var(--cacao);
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 0.22rem 0.7rem;
+      border-radius: 40px;
+      border: 1px solid var(--borde-suave);
+    }
+
+    .btn-add {
+      background: var(--azul-profundo);
+      color: var(--crema);
+      border: none;
+      border-radius: 60px;
+      padding: 0.55rem 1.2rem;
+      font-weight: 600;
+      font-size: 0.8rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: 0.25s;
+      font-family: inherit;
+      align-self: flex-start;
+      letter-spacing: 0.3px;
+    }
+
+    .btn-add:hover {
+      background: var(--dorado-oscuro);
+      transform: translateY(-1px);
+    }
+
+    .process-wrap {
+      background: linear-gradient(150deg, var(--azul-profundo) 0%, var(--azul-oscuro) 100%);
+      border-radius: 40px;
+      padding: 3.5rem 2.5rem;
+      color: var(--crema);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .process-wrap::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: rgba(201, 169, 97, 0.14);
+    }
+
+    .process-wrap::after {
+      content: '';
+      position: absolute;
+      bottom: -100px;
+      left: -60px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: rgba(201, 169, 97, 0.06);
+    }
+
+    .process-wrap .head {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 2.8rem;
+    }
+
+    .process-wrap .head .badge {
+      background: rgba(201, 169, 97, 0.16);
+      color: var(--dorado-claro);
+      border-color: rgba(201, 169, 97, 0.4);
+    }
+
+    .process-wrap .head .badge i {
+      color: var(--dorado);
+    }
+
+    .process-wrap .head h2 {
+      color: var(--crema);
+      font-size: 2.1rem;
+      font-weight: 700;
+      margin-top: 0.9rem;
+      letter-spacing: -0.4px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .process-wrap .head p {
+      color: rgba(250, 248, 243, 0.65);
+      margin-top: 0.5rem;
+    }
+
+    .process-steps {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .step {
+      background: rgba(250, 248, 243, 0.05);
+      border: 1px solid rgba(201, 169, 97, 0.2);
+      border-radius: 20px;
+      padding: 1.6rem 1rem;
+      text-align: center;
+      transition: all 0.25s ease;
+    }
+
+    .step:hover {
+      background: rgba(201, 169, 97, 0.1);
+      border-color: var(--dorado);
+      transform: translateY(-5px);
+    }
+
+    .step i {
+      font-size: 1.6rem;
+      color: var(--dorado);
+      margin-bottom: 0.7rem;
+      display: block;
+    }
+
+    .step strong {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--crema);
+    }
+
+    .step span {
+      font-size: 0.76rem;
+      color: rgba(250, 248, 243, 0.55);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .about-grid h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--azul-profundo);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .about-grid p {
+      color: var(--cacao-suave);
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .check-list {
+      list-style: none;
+      margin-top: 1.5rem;
+    }
+
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      margin-bottom: 0.9rem;
+      font-weight: 500;
+      color: var(--cacao);
+    }
+
+    .check-list li i {
+      color: var(--dorado-oscuro);
+      background: var(--crema-oscura);
+      border: 1px solid var(--borde-suave);
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.72rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .about-visual {
+      background: #FFFFFF;
+      border-radius: 36px;
+      padding: 2rem;
+      box-shadow: 0 25px 50px -22px rgba(31, 42, 68, 0.15), 0 2px 6px rgba(31, 42, 68, 0.04);
+      border: 1px solid rgba(201, 169, 97, 0.22);
+    }
+
+    .about-visual .img-slot {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      border-radius: 22px;
+      background: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.7rem;
+      border: 1px solid rgba(201, 169, 97, 0.18);
+      overflow: hidden;
+      padding: 1.5rem;
+      box-shadow: inset 0 0 30px rgba(250, 248, 243, 0.8);
+    }
+
+    .about-visual .img-slot img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .about-visual .img-slot .img-fallback-lg {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+      text-align: center;
+    }
+
+    .about-visual .img-slot .img-fallback-lg strong {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: 2.6rem;
+      letter-spacing: -1.5px;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--azul-profundo) 0%, var(--azul-profundo) 55%, var(--dorado) 55%, var(--dorado) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    .about-visual .img-slot .img-fallback-lg small {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--cacao-suave);
+    }
+
+    .about-visual .img-slot i {
+      font-size: 3rem;
+      color: var(--dorado);
+      opacity: 0.5;
+    }
+
+    .about-visual .badges-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.7rem;
+      margin-top: 1.2rem;
+      text-align: center;
+    }
+
+    .about-visual .badges-row div {
+      background: var(--crema);
+      border: 1px solid var(--borde-suave);
+      border-radius: 14px;
+      padding: 0.75rem 0.4rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--cacao);
+      transition: all 0.25s ease;
+    }
+
+    .about-visual .badges-row div:hover {
+      background: #FFFFFF;
+      border-color: rgba(201, 169, 97, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .about-visual .badges-row i {
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+      color: var(--dorado-oscuro);
+    }
+
+    @media (max-width: 900px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .about-grid h2 {
+        font-size: 1.8rem;
+      }
+    }
+
+    .cta-final {
+      background: linear-gradient(140deg, var(--azul-profundo) 0%, var(--azul-oscuro) 100%);
+      border-radius: 40px;
+      padding: 4rem 2.5rem;
+      text-align: center;
+      color: var(--crema);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(201, 169, 97, 0.15);
+    }
+
+    .cta-final::before {
+      content: '';
+      position: absolute;
+      top: -120px;
+      right: -80px;
+      width: 340px;
+      height: 340px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201, 169, 97, 0.16) 0%, transparent 70%);
+    }
+
+    .cta-final::after {
+      content: '';
+      position: absolute;
+      bottom: -140px;
+      left: -100px;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201, 169, 97, 0.08) 0%, transparent 70%);
+    }
+
+    .cta-final>* {
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta-final h2 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .cta-final h2 .amarillo {
+      color: var(--dorado);
+      font-style: italic;
+    }
+
+    .cta-final p {
+      color: rgba(250, 248, 243, 0.72);
+      max-width: 560px;
+      margin: 0 auto 2rem;
+      font-size: 1.05rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .cta-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2.5rem;
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(201, 169, 97, 0.18);
+    }
+
+    .cta-info div {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+      color: rgba(250, 248, 243, 0.8);
+    }
+
+    .cta-info i {
+      color: var(--dorado);
+      font-size: 1.05rem;
+    }
+
+    footer {
+      padding: 3rem 0 2rem;
+      text-align: center;
+      color: var(--cacao-suave);
+      font-size: 0.85rem;
+      background: var(--crema);
+    }
+
+    footer .brand-mini {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.9rem;
+    }
+
+    footer .brand-mini-logo {
+      width: 44px;
+      height: 44px;
+      background: #FFFFFF;
+      border-radius: 10px;
+      border: 1px solid rgba(201, 169, 97, 0.3);
+      box-shadow: 0 4px 12px -4px rgba(31, 42, 68, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 4px;
+    }
+
+    footer .brand-mini-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    footer .brand-mini-logo .logo-fallback {
+      display: none;
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.5px;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--azul-profundo) 0%, var(--azul-profundo) 55%, var(--dorado) 55%, var(--dorado) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    footer .brand-mini-text {
+      text-align: left;
+      line-height: 1.15;
+    }
+
+    footer .brand-mini-text strong {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--azul-profundo);
+      letter-spacing: 0.5px;
+    }
+
+    footer .brand-mini-text span {
+      display: block;
+      font-size: 0.58rem;
+      font-weight: 600;
+      color: var(--cacao-suave);
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    .wa-float {
+      position: fixed;
+      bottom: 26px;
+      right: 26px;
+      z-index: 999;
+      background: var(--verde-wa);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.92rem;
+      border-radius: 60px;
+      padding: 0.9rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      box-shadow: 0 10px 28px rgba(61, 168, 95, 0.32);
+      transition: all 0.25s ease;
+      animation: pulseWa 2.6s infinite;
+    }
+
+    .wa-float:hover {
+      background: var(--verde-wa-oscuro);
+      transform: scale(1.04);
+      animation: none;
+    }
+
+    .wa-float i {
+      font-size: 1.4rem;
+    }
+
+    @keyframes pulseWa {
+
+      0%,
+      100% {
+        box-shadow: 0 10px 28px rgba(61, 168, 95, 0.32);
+      }
+
+      50% {
+        box-shadow: 0 10px 28px rgba(61, 168, 95, 0.32), 0 0 0 12px rgba(61, 168, 95, 0.1);
+      }
+    }
+
+    @media (max-width: 560px) {
+      .wa-float span {
+        display: none;
+      }
+
+      .wa-float {
+        padding: 0.9rem;
+        border-radius: 50%;
+      }
+    }
+
+    .cart-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(31, 42, 68, 0.5);
+      z-index: 999;
+    }
+
+    .cart-overlay.open {
+      display: block;
+    }
+
+    .cart-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      max-width: 480px;
+      height: 100%;
+      background: var(--crema);
+      box-shadow: -4px 0 20px rgba(31, 42, 68, 0.1);
+      z-index: 1000;
+      padding: 1.5rem;
+      overflow-y: auto;
+      flex-direction: column;
+    }
+
+    .cart-modal.open {
+      display: flex;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--borde-suave);
+      padding: 1rem 0;
+      gap: 0.5rem;
+    }
+
+    .cart-item button {
+      background: none;
+      border: none;
+      color: #b85555;
+      font-size: 1.05rem;
+      cursor: pointer;
+      padding: 0.3rem;
+    }
+
+    .cart-item .qty-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .cart-item .qty-controls button {
+      background: var(--crema-oscura);
+      color: var(--azul-profundo);
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      font-weight: 700;
+      font-size: 0.9rem;
+      border: 1px solid var(--borde-suave);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* CHATBOT ROMÁN */
+    #roman-launcher {
+      position: fixed;
+      bottom: 26px;
+      left: 26px;
+      z-index: 9998;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: var(--azul-profundo);
+      border: 2px solid var(--dorado);
+      color: var(--crema);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 30px rgba(31, 42, 68, 0.35);
+      transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.1);
+      animation: romanPulse 2.8s infinite;
+    }
+
+    #roman-launcher:hover {
+      transform: scale(1.08);
+    }
+
+    #roman-launcher svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    #roman-launcher .roman-dot {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--verde-wa);
+      border: 2px solid var(--azul-profundo);
+    }
+
+    @keyframes romanPulse {
+
+      0%,
+      100% {
+        box-shadow: 0 10px 30px rgba(31, 42, 68, 0.35), 0 0 0 0 rgba(201, 169, 97, 0.4);
+      }
+
+      50% {
+        box-shadow: 0 10px 30px rgba(31, 42, 68, 0.35), 0 0 0 14px rgba(201, 169, 97, 0);
+      }
+    }
+
+    #roman-window {
+      position: fixed;
+      bottom: 100px;
+      left: 26px;
+      z-index: 9999;
+      width: 380px;
+      max-width: calc(100vw - 32px);
+      height: 620px;
+      max-height: calc(100vh - 140px);
+      background: var(--azul-profundo);
+      border-radius: 20px;
+      border: 1px solid rgba(201, 169, 97, 0.25);
+      box-shadow: 0 20px 50px -12px rgba(19, 27, 46, 0.6);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(20px) scale(0.96);
+      pointer-events: none;
+      transition: opacity 0.35s cubic-bezier(0.2, 0.9, 0.3, 1.1), transform 0.35s cubic-bezier(0.2, 0.9, 0.3, 1.1);
+    }
+
+    #roman-window.roman-open {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      pointer-events: auto;
+    }
+
+    .roman-header {
+      padding: 16px 18px;
+      background: linear-gradient(135deg, var(--azul-profundo) 0%, var(--azul-oscuro) 100%);
+      border-bottom: 1px solid rgba(201, 169, 97, 0.2);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .roman-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--dorado) 0%, var(--dorado-oscuro) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--azul-oscuro);
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+      border: 1px solid rgba(250, 248, 243, 0.2);
+    }
+
+    .roman-header-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .roman-header-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--crema);
+      letter-spacing: 0.3px;
+    }
+
+    .roman-header-info p {
+      font-size: 0.72rem;
+      color: rgba(250, 248, 243, 0.65);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 2px;
+    }
+
+    .roman-status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--verde-wa);
+      box-shadow: 0 0 8px var(--verde-wa);
+    }
+
+    .roman-close {
+      background: rgba(250, 248, 243, 0.08);
+      border: 1px solid rgba(201, 169, 97, 0.2);
+      color: var(--crema);
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      line-height: 1;
+      transition: background 0.2s;
+    }
+
+    .roman-close:hover {
+      background: rgba(250, 248, 243, 0.16);
+    }
+
+    .roman-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 18px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(201, 169, 97, 0.25) transparent;
+    }
+
+    .roman-body::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    .roman-body::-webkit-scrollbar-thumb {
+      background: rgba(201, 169, 97, 0.25);
+      border-radius: 10px;
+    }
+
+    .roman-msg {
+      max-width: 85%;
+      padding: 11px 15px;
+      border-radius: 16px;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      animation: romanFadeIn 0.4s cubic-bezier(0.2, 0.9, 0.3, 1.1);
+      word-wrap: break-word;
+    }
+
+    .roman-msg.bot {
+      background: rgba(250, 248, 243, 0.06);
+      color: var(--crema);
+      border-bottom-left-radius: 4px;
+      align-self: flex-start;
+      border: 1px solid rgba(201, 169, 97, 0.12);
+    }
+
+    .roman-msg.user {
+      background: linear-gradient(135deg, var(--dorado-oscuro) 0%, var(--dorado) 100%);
+      color: var(--azul-oscuro);
+      border-bottom-right-radius: 4px;
+      align-self: flex-end;
+      font-weight: 500;
+    }
+
+    .roman-msg.system {
+      background: rgba(201, 169, 97, 0.12);
+      color: var(--dorado-claro);
+      border: 1px solid rgba(201, 169, 97, 0.3);
+      font-size: 0.82rem;
+      text-align: center;
+      align-self: center;
+      max-width: 95%;
+    }
+
+    @keyframes romanFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .roman-typing {
+      display: flex;
+      gap: 4px;
+      padding: 12px 16px;
+      background: rgba(250, 248, 243, 0.06);
+      border-radius: 16px;
+      border-bottom-left-radius: 4px;
+      align-self: flex-start;
+      width: fit-content;
+      border: 1px solid rgba(201, 169, 97, 0.12);
+    }
+
+    .roman-typing span {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: rgba(201, 169, 97, 0.6);
+      animation: romanBounce 1.2s infinite;
+    }
+
+    .roman-typing span:nth-child(2) {
+      animation-delay: 0.15s;
+    }
+
+    .roman-typing span:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+
+    @keyframes romanBounce {
+
+      0%,
+      60%,
+      100% {
+        transform: translateY(0);
+        opacity: 0.5;
+      }
+
+      30% {
+        transform: translateY(-5px);
+        opacity: 1;
+      }
+    }
+
+    .roman-options {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 4px;
+      animation: romanFadeIn 0.4s cubic-bezier(0.2, 0.9, 0.3, 1.1);
+    }
+
+    .roman-option {
+      background: rgba(250, 248, 243, 0.04);
+      border: 1px solid rgba(201, 169, 97, 0.28);
+      color: var(--crema);
+      padding: 11px 14px;
+      border-radius: 12px;
+      text-align: left;
+      font-size: 0.85rem;
+      font-family: inherit;
+      cursor: pointer;
+      transition: all 0.22s;
+      line-height: 1.35;
+    }
+
+    .roman-option:hover {
+      background: rgba(201, 169, 97, 0.12);
+      border-color: var(--dorado);
+      transform: translateX(3px);
+    }
+
+    .roman-option:active {
+      transform: scale(0.98);
+    }
+
+    .roman-summary {
+      background: rgba(201, 169, 97, 0.08);
+      border: 1px solid rgba(201, 169, 97, 0.35);
+      border-radius: 14px;
+      padding: 14px 16px;
+      margin-top: 6px;
+      animation: romanFadeIn 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.1);
+    }
+
+    .roman-summary h4 {
+      font-size: 0.75rem;
+      color: var(--dorado);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .roman-summary-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 5px 0;
+      border-bottom: 1px dashed rgba(201, 169, 97, 0.15);
+      font-size: 0.82rem;
+    }
+
+    .roman-summary-row:last-child {
+      border-bottom: none;
+    }
+
+    .roman-summary-row .label {
+      color: rgba(250, 248, 243, 0.55);
+    }
+
+    .roman-summary-row .value {
+      color: var(--crema);
+      font-weight: 600;
+      text-align: right;
+    }
+
+    .roman-wa-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--verde-wa);
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 18px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      margin-top: 8px;
+      transition: all 0.22s;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      font-family: inherit;
+      animation: romanFadeIn 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.1);
+      letter-spacing: 0.2px;
+    }
+
+    .roman-wa-btn:hover {
+      background: var(--verde-wa-oscuro);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(61, 168, 95, 0.3);
+    }
+
+    .roman-wa-btn svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .roman-input-area {
+      padding: 12px 14px;
+      border-top: 1px solid rgba(201, 169, 97, 0.18);
+      background: rgba(19, 27, 46, 0.5);
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .roman-input-area input {
+      flex: 1;
+      background: rgba(250, 248, 243, 0.06);
+      border: 1px solid rgba(201, 169, 97, 0.18);
+      color: var(--crema);
+      padding: 11px 14px;
+      border-radius: 24px;
+      font-size: 0.85rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .roman-input-area input:focus {
+      border-color: var(--dorado);
+    }
+
+    .roman-input-area input::placeholder {
+      color: rgba(250, 248, 243, 0.4);
+    }
+
+    .roman-send {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--dorado);
+      border: none;
+      color: var(--azul-oscuro);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.2s;
+    }
+
+    .roman-send:hover {
+      background: var(--dorado-claro);
+      transform: scale(1.05);
+    }
+
+    .roman-send svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    @media (max-width: 640px) {
+      #roman-window {
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        max-width: 100vw;
+        height: 100vh;
+        max-height: 100vh;
+        border-radius: 0;
+      }
+
+      #roman-launcher {
+        bottom: 20px;
+        left: 20px;
+        width: 56px;
+        height: 56px;
+      }
+
+      #roman-launcher svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+  <a href="https://wa.me/573112581129?text=Hola%20Juan%20Román,%20quiero%20asesoría%20experta%20en%20maquinaria%20para%20cacao"
+    target="_blank" rel="noopener" class="wa-float">
+    <i class="fab fa-whatsapp"></i>
+    <span>Consultar con Juan Román</span>
+  </a>
+
+  <!-- BOTÓN FLOTANTE ROMÁN -->
+  <button id="roman-launcher" aria-label="Abrir chat con Román">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path
+        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+    </svg>
+    <span class="roman-dot"></span>
+  </button>
+
+  <!-- VENTANA DEL CHAT ROMÁN -->
+  <div id="roman-window" role="dialog" aria-label="Asistente Román de HTL Importaciones">
+    <div class="roman-header">
+      <div class="roman-avatar">R</div>
+      <div class="roman-header-info">
+        <h3>Román</h3>
+        <p><span class="roman-status-dot"></span> En línea · Asesor HTL</p>
+      </div>
+      <button class="roman-close" id="roman-close" aria-label="Cerrar chat">&times;</button>
+    </div>
+    <div class="roman-body" id="roman-body"></div>
+    <div class="roman-input-area">
+      <input type="text" id="roman-input" placeholder="Escribe tu mensaje..." autocomplete="off">
+      <button class="roman-send" id="roman-send" aria-label="Enviar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+          stroke-linejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- MODAL CARRITO -->
+  <div id="cartOverlay" class="cart-overlay"></div>
+  <div id="cartModal" class="cart-modal">
+    <div
+      style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--borde-suave); padding-bottom: 1rem;">
+      <h2 style="color: var(--azul-profundo); font-size: 1.15rem; font-family: 'Playfair Display', serif;"><i
+          class="fas fa-shopping-cart" style="color: var(--dorado-oscuro);"></i> Equipos seleccionados</h2>
+      <button id="closeCartBtn"
+        style="background: none; border: none; font-size: 1.7rem; cursor: pointer; color: var(--cacao);">&times;</button>
+    </div>
+    <div id="cartItemsList" style="flex:1; margin: 1.5rem 0;"></div>
+    <div style="border-top: 1px solid var(--borde-suave); padding-top: 1rem;">
+      <p id="cartTotalItems" style="font-weight: 600; color: var(--azul-profundo);">Total: 0 equipos</p>
+      <button id="sendWhatsappCartBtn" class="btn btn-primary"
+        style="width: 100%; justify-content: center; margin-top: 1rem;">
+        <i class="fab fa-whatsapp"></i> Enviar cotización por WhatsApp
+      </button>
+      <p style="font-size: 0.7rem; color: var(--cacao-suave); margin-top: 1rem; text-align: center;">Juan Román te
+        responderá directamente con tu cotización personalizada.</p>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <nav class="nav">
+        <a href="#inicio" class="brand">
+          <div class="brand-logo">
+            <img src="logo.png" alt="HLT Importaciones"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <span class="logo-fallback">HLT</span>
+          </div>
+          <div class="brand-text">
+            <strong>HLT IMPORTACIONES</strong>
+            <span>Y Asesoría en Maquinaria para Chocolatería</span>
+          </div>
+        </a>
+        <div class="nav-links">
+          <a href="#catalogo">Catálogo</a>
+          <a href="#proceso">Bean-to-Bar</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+        <div class="cart-icon" id="cartIcon" aria-label="Abrir carrito">
+          <i class="fas fa-shopping-cart fa-lg" style="color: var(--azul-profundo);"></i>
+          <span id="cartCounter" class="cart-count">0</span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="reveal">
+          <span class="badge"><i class="fas fa-industry"></i> Tecnología industrial · Bean-to-Bar</span>
+          <h1>Del Grano a la Barra con <span class="highlight">Tecnología Industrial</span></h1>
+          <p class="lead">Maquinaria profesional para tostado, molienda, temperado, enrobing, alcalinización y procesos
+            complementarios. Representación oficial en Colombia por <strong>Ing. Juan Román Pacheco</strong> — HTL
+            Importaciones.</p>
+          <div class="hero-actions">
+            <a href="#catalogo" class="btn btn-primary">Explorar equipos <i class="fas fa-arrow-right"></i></a>
+            <a href="https://wa.me/573112581129?text=Hola%20Juan%20Román,%20quiero%20asesoría%20para%20mi%20proyecto%20de%20cacao"
+              target="_blank" rel="noopener" class="btn btn-wa"><i class="fab fa-whatsapp"></i> Contactar al experto</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat"><strong>+20</strong><span>Años del fabricante</span></div>
+            <div class="stat"><strong>360°</strong><span>Asesoría integral</span></div>
+            <div class="stat"><strong>100%</strong><span>Soporte técnico</span></div>
+          </div>
+        </div>
+        <div class="hero-visual reveal">
+          <div class="logo-slot">
+            <img src="logo-hero.png" alt="HLT Importaciones"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="logo-fallback-lg">
+              <strong>HLT</strong>
+              <small>Importaciones y Asesoría</small>
+            </div>
+          </div>
+          <div class="mini-badges">
+            <div><i class="fas fa-fire"></i> Tostado y Winnowing</div>
+            <div><i class="fas fa-cogs"></i> Molienda y Refinado</div>
+            <div><i class="fas fa-temperature-low"></i> Temperado Preciso</div>
+            <div><i class="fas fa-flask"></i> Alcalinización</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO (Se mantiene igual) -->
+  <section id="catalogo" class="section" style="background: var(--blanco);">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="badge"><i class="fas fa-list"></i> Catálogo oficial</span>
+        <h2>Maquinaria profesional para cada etapa</h2>
+        <p>Equipos en acero inoxidable 304 con control PLC. Agrega al carrito los modelos que necesitas y envía tu
+          cotización directo a Juan Román.</p>
+      </div>
+
+      <div style="margin-bottom: 4rem;" class="reveal">
+        <h3
+          style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--azul-profundo); font-family: 'Playfair Display', serif;">
+          <i class="fas fa-seedling" style="color: var(--dorado-oscuro);"></i> Preparación del Grano
+        </h3>
+        <div class="product-grid">
+          <div class="product-card" data-prod='{"name":"Tostadores industriales","model":"Tostador SEMC"}'>
+            <i class="fas fa-fire icon"></i>
+            <h4>Tostadores industriales</h4>
+            <p>Tambor rotatorio con control electrónico de temperatura. Capacidades 8–100 kg/batch para desarrollo de
+              aroma y sabor.</p>
+            <div class="meta"><span>Acero 304</span><span>Control PLC</span></div>
+            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+          </div>
+          <div class="product-card" data-prod='{"name":"CW200 · Quebrador + Winnower","model":"CW200"}'>
+            <i class="fas fa-cogs icon"></i>
+            <h4>CW200 · Quebrador + Winnower</h4>
+            <p>Eficiencia de pelado >78%. Capacidad 80–200 kg/h. Separación precisa de cascarilla y nibs. Motor 0.37 kW.
+            </p>
+            <div class="meta"><span>220V monofásico</span><span>47×98×140 cm</span></div>
+            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+          </div>
+          <div class="product-card" data-prod='{"name":"YQ200 · Descascarillador","model":"YQ200"}'>
+            <i class="fas fa-wind icon"></i>
+            <h4>YQ200 · Descascarillador</h4>
+            <p>200 kg/h, eficiencia 98.5% en dos pasadas. Construcción íntegra en acero inoxidable 304.</p>
+            <div class="meta"><span>380V</span><span>980×890×1280 mm</span></div>
+            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 4rem;" class="reveal">
+        <h3
+          style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--azul-profundo); font-family: 'Playfair Display', serif;">
+          <i class="fas fa-mortar-pestle" style="color: var(--dorado-oscuro);"></i> Molienda y Refinado
+        </h3>
+        <div class="product-grid">
+          <div class="product-card"
+            data-prod='{"name":"SMJ07 / SMJ30 / SMJ60 · Molinos de piedra","model":"SMJ series"}'>
+            <i class="fas fa-gem icon"></i>
+            <h4>Molinos de piedra SMJ</h4>
+            <p>Granito natural, velocidad variable 0–80 rpm. Capacidades 7L (5 kg), 30L (25 kg), 60L (50 kg).</p>
+            <div class="meta"><span>Piedra natural</span><span>Acero 304</span></div>
+            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+          </div>
+          <div class="product-card" data-prod='{"name":"B12 / B75 / BT180 · Ball Mill","model":"Ball Mill"}'>
+            <i class="fas fa-cogs icon"></i>
+            <h4>Ball Mill B12 / B75 / BT180</h4>
+            <p>Refinado fino por debajo de 20 micras. Control de temperatura integrado. BT60/180 combina temperado +
+              molienda.</p>
+            <div class="meta"><span>75L / 60L</span><span>Alta eficiencia</span></div>
+            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+          </div>
+          <div class="product-card" data-prod='{"name":"YYMJ03 / MJ10 · Pre-molino","model":"Pre-grinder"}'>
+            <i class="fas fa-tachometer-alt icon"></i>
+            <h4>Pre-molino YYMJ03 / MJ10</h4>
+            <p>Pre-muele nibs hasta convertirlos en pasta antes del refinado. Formato compacto. Producción 3–20 kg/h.
+            </p>
+            <div class="meta"><span>550W</span><span>51×41×68 cm</span></div>
+            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+          </div>
+          <div class="product-card" data-prod='{"name":"YML50 / 70 / 120L · Piedra industrial","model":"YML series"}'>
+            <i class="fas fa-industry icon"></i>
+            <h4>YML50 / 70 / 120L</h4>
+            <p>Serie industrial de molinos de piedra de alta capacidad. Para producción continua y fábricas de
+              chocolate.</p>
+            <div class="meta"><span>Industrial</span><span>Acero 304</span></div>
+            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 4rem;" class="reveal">
+        <h3
+          style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--azul-profundo); font-family: 'Playfair Display', serif;">
+          <i class="fas fa-temperature-low" style="color: var(--dorado-oscuro);"></i> Temperado de Precisión
+        </h3>
+        <div class="product-grid">
+          <div class="product-card" data-prod='{"name":"XT260 / XT80 · Temperador continuo","model":"XT series"}'>
+            <i class="fas fa-chart-line icon"></i>
+            <h4>Temperador continuo XT260 / XT80</h4>
+            <p>XT260: 260–520 L/h. XT80: 80 L/h. Pantalla táctil, control PID, ahorro de agua >50%. Alimentación 220V
+              monofásica.</p>
+            <div class="meta"><span>Alta producción</span><span>220V</span></div>
+            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+          </div>
+          <div class="product-card"
+            data-prod='{"name":"T30 / T60 / MT30 / MT60 · Temperadores batch","model":"T/MT series"}'>
+            <i class="fas fa-temperature-high icon"></i>
+            <h4>Temperadores Batch T30 / T60 / MT30 / MT60</h4>
+            <p>Capacidades 30L y 60L. Control digital, agua forzada, agitador raspador. T30: 90 L/h. T60: 180 L/h.</p>
+            <div class="meta"><span>30L / 60L</span><span>220V</span></div>
+            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+          </div>
+          <div class="product-card" data-prod='{"name":"HT03 / HT05 · Sobremesa","model":"HT series"}'>
+            <i class="fas fa-temperature-half icon"></i>
+            <h4>Sobremesa HT03 / HT05</h4>
+            <p>Modelos compactos 4L y 7L para laboratorio y producción artesanal. 250–300W, acero inoxidable 304.</p>
+            <div class="meta"><span>4L / 7L</span><span>Sobremesa</span></div>
+            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+          </div>
+          <div class="product-card" data-prod='{"name":"BWG75 / BWG150 / BWG500 · Tanques","model":"BWG series"}'>
+            <i class="fas fa-database icon"></i>
+            <h4>Tanques BWG75 / BWG150 / BWG500</h4>
+            <p>Depósitos de fusión y conservación. Triple aislamiento, control digital. Modelos de 75, 150, 500, hasta
+              2000 L.</p>
+            <div class="meta"><span>Acero 304</span><span>380V trifásico</span></div>
+            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 4rem;" class="reveal">
+        <h3
+          style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--azul-profundo); font-family: 'Playfair Display', serif;">
+          <i class="fas fa-fill-drip" style="color: var(--dorado-oscuro);"></i> Enrobing, Moldeado y Enfriamiento
+        </h3>
+        <div class="product-grid">
+          <div class="product-card" data-prod='{"name":"ER600 / ER1200 / ERG600 · Enrobers","model":"ER series"}'>
+            <i class="fas fa-layer-group icon"></i>
+            <h4>Enrobers ER600 / ER1200 / ERG600</h4>
+            <p>Anchos variables 600–1600 mm. Recubrimiento superior, inferior y total. Bandeja extraíble. Velocidad 1–3
+              m/min.</p>
+            <div class="meta"><span>Acero 304</span><span>Recubrimiento total</span></div>
+            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+          </div>
+          <div class="product-card" data-prod='{"name":"MM30 / MM60 / MM08 / MM15 · Moldeadoras","model":"MM series"}'>
+            <i class="fas fa-cube icon"></i>
+            <h4>Moldeadoras MM30 / MM60 / MM08 / MM15</h4>
+            <p>Para tabletas, bombones y barras. Control digital de temperatura. Capacidades 8L, 15L, 30L y 60L.</p>
+            <div class="meta"><span>220V</span><span>Control digital</span></div>
+            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+          </div>
+          <div class="product-card" data-prod='{"name":"Túneles de enfriamiento","model":"Cooling Tunnel"}'>
+            <i class="fas fa-snowplow icon"></i>
+            <h4>Túneles de Enfriamiento</h4>
+            <p>Longitudes 4.7m, 12m y hasta 35m. Aislamiento sándwich 20mm. Temperatura 5–10°C. Compresores 3P a 25P.
+            </p>
+            <div class="meta"><span>0.5–5 m/min</span><span>Aislamiento 20mm</span></div>
+            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+          </div>
+          <div class="product-card" data-prod='{"name":"TE400 · Temperado + Coating","model":"TE400"}'>
+            <i class="fas fa-hand-sparkles icon"></i>
+            <h4>TE400 · Temperado + Coating</h4>
+            <p>Sistema integrado para temperado y recubrimiento continuo. Ancho 400 mm, velocidad 1–3 m/min.</p>
+            <div class="meta"><span>Integrado</span><span>Fácil mantenimiento</span></div>
+            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 2rem;" class="reveal">
+        <h3
+          style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--azul-profundo); font-family: 'Playfair Display', serif;">
+          <i class="fas fa-flask" style="color: var(--dorado-oscuro);"></i> Tecnología Patentada y Equipos Especiales
+        </h3>
+        <div class="product-grid">
+          <div class="product-card" data-prod='{"name":"Impregnated Machine (patente)","model":"Impregnated"}'
+            style="border-left: 3px solid var(--dorado);">
+            <i class="fas fa-microchip icon"></i>
+            <h4>Impregnated Machine</h4>
+            <p>Patente CN2016214783393. Infiltra chocolate en snacks porosos. Producto final no se derrite al tacto.
+              Ideal para clima tropical.</p>
+            <div class="meta"><span>Patente</span><span>Exclusiva</span></div>
+            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+          </div>
+          <div class="product-card" data-prod='{"name":"6YY-150 · Prensa manteca de cacao","model":"6YY-150"}'>
+            <i class="fas fa-oil-can icon"></i>
+            <h4>Prensa hidráulica 6YY-150</h4>
+            <p>Extracción de manteca de pasta de cacao. 150 kg/h, presión máxima de 55 MPa. Acero inoxidable.</p>
+            <div class="meta"><span>150 kg/h</span><span>55 MPa</span></div>
+            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+          </div>
+          <div class="product-card" data-prod='{"name":"SEM-600 / SEM-80 / SEM-60 · Envasadoras","model":"SEM series"}'>
+            <i class="fas fa-boxes icon"></i>
+            <h4>Envasadoras SEM-600 / SEM-80 / SEM-60</h4>
+            <p>Llenado de líquidos y pastas. 4–15 bolsas/min, control PLC, 380V. SEM-80 y SEM-60 para chocolate sólido.
+            </p>
+            <div class="meta"><span>380V</span><span>Control PLC</span></div>
+            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+          </div>
+          <div class="product-card" data-prod='{"name":"PG-3 / PG-30 · Pulidoras","model":"PG series"}'>
+            <i class="fas fa-drumstick-bite icon"></i>
+            <h4>Pulidoras PG-3 / PG-30</h4>
+            <p>Confitado y pulido de grageas y frutos secos. Velocidad variable, control de temperatura. Capacidades 3
+              kg y 30 kg.</p>
+            <div class="meta"><span>3 kg / 30 kg</span><span>Velocidad variable</span></div>
+            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+          </div>
+          <div class="product-card" data-prod='{"name":"PQ01 · Fuente de chocolate","model":"PQ01"}'>
+            <i class="fas fa-chocolate-bar icon"></i>
+            <h4>Fuente de chocolate PQ01</h4>
+            <p>20 litros, 220V monofásico, 0.6 kW. Cuerpo en acero inoxidable 304 de grado alimenticio.</p>
+            <div class="meta"><span>20 L</span><span>220V</span></div>
+            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+          </div>
+          <div class="product-card" data-prod='{"name":"Extrusora industrial JCJ300","model":"Extruder"}'>
+            <i class="fas fa-candy-cane icon"></i>
+            <h4>Extrusora industrial JCJ300</h4>
+            <p>300 kg/hora. 380V, 4.17 kW. Control PLC. Diseño higiénico para fácil limpieza. Formas personalizables.
+            </p>
+            <div class="meta"><span>300 kg/h</span><span>Control PLC</span></div>
+            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section id="proceso" class="section" style="background: var(--crema);">
+    <div class="container">
+      <div class="process-wrap reveal">
+        <div class="head">
+          <span class="badge"><i class="fas fa-diagram-project"></i> Del grano al producto final</span>
+          <h2>Cinco etapas integradas en una sola cadena</h2>
+          <p>SEMMCO integra cada etapa para asegurar continuidad operativa, higiene controlada y reproducibilidad
+            consistente en cada lote.</p>
+        </div>
+        <div class="process-steps">
+          <div class="step"><i class="fas fa-fire"></i><strong>Tostado</strong><span>Perfil de sabor</span></div>
+          <div class="step"><i class="fas fa-seedling"></i><strong>Descascarillado</strong><span>Nibs limpios</span>
+          </div>
+          <div class="step"><i class="fas fa-mortar-pestle"></i><strong>Molienda</strong><span>Pasta de cacao</span>
+          </div>
+          <div class="step"><i class="fas fa-temperature-half"></i><strong>Temperado</strong><span>Cristalización</span>
+          </div>
+          <div class="step"><i class="fas fa-box-open"></i><strong>Envasado</strong><span>Producto final</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE HLT -->
+  <section id="nosotros" class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="reveal">
+          <span class="badge"><i class="fas fa-people-group"></i> Quiénes somos</span>
+          <h2 style="margin-top: 0.9rem;">Más que proveedores, socios técnicos de tu proyecto</h2>
+          <p>En <strong>HLT Importaciones</strong> nos especializamos en la compra y el servicio técnico de maquinaria
+            para la transformación del cacao. Combinamos conocimiento industrial, acompañamiento cercano y experiencia
+            real en planta.</p>
+          <p>Nuestro enfoque es simple: entender tu operación antes de recomendar cualquier equipo. Porque cada
+            productor tiene necesidades distintas, y la maquinaria correcta marca la diferencia entre producir y
+            producir bien.</p>
+          <ul class="check-list">
+            <li><i class="fas fa-check"></i> Asesoría objetiva, sin compromiso comercial forzado</li>
+            <li><i class="fas fa-check"></i> Acompañamiento técnico durante toda la operación</li>
+            <li><i class="fas fa-check"></i> Conocimiento real del proceso del cacao</li>
+            <li><i class="fas fa-check"></i> Respuesta ágil por canales directos</li>
+          </ul>
+        </div>
+        <div class="about-visual reveal">
+          <div class="img-slot">
+            <img src="nosotros.png" alt="HLT Importaciones"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="img-fallback-lg">
+              <strong>HLT</strong>
+              <small>Importaciones y Asesoría</small>
+            </div>
+          </div>
+          <div class="badges-row">
+            <div><i class="fas fa-shield-halved"></i> Confianza</div>
+            <div><i class="fas fa-microscope"></i> Precisión</div>
+            <div><i class="fas fa-headset"></i> Soporte</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === 3. SECCIÓN DE PREGUNTAS FRECUENTES (Optimizada para IA y Google) === -->
+  <section id="faq" class="section" style="background: var(--blanco);">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="badge"><i class="fas fa-question-circle"></i> Resolvemos tus dudas</span>
+        <h2>Preguntas Frecuentes sobre Maquinaria para Cacao</h2>
+        <p>Respuestas directas para que tomes la mejor decisión en tu proyecto de chocolatería.</p>
+      </div>
+      <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem;">
+
+        <div style="border-bottom: 1px solid var(--borde-suave); padding-bottom: 1rem;">
+          <h3
+            style="font-size: 1.1rem; font-weight: 700; color: var(--azul-profundo); margin-bottom: 0.5rem; font-family: 'Playfair Display', serif;">
+            ¿Qué es una línea Bean-to-Bar y qué incluye?</h3>
+          <p style="color: var(--cacao-suave); font-size: 0.95rem;">Una línea Bean-to-Bar es un conjunto integrado de
+            máquinas que transforman el grano de cacao en barra de chocolate. Incluye tostador, descascarillador
+            (winnower), molino (de piedra o bolas), temperadora, moldeadora y túnel de enfriamiento. HLT Importaciones
+            ofrece estas líneas completas con equipos SEMMCO de acero inoxidable 304.</p>
+        </div>
+
+        <div style="border-bottom: 1px solid var(--borde-suave); padding-bottom: 1rem;">
+          <h3
+            style="font-size: 1.1rem; font-weight: 700; color: var(--azul-profundo); margin-bottom: 0.5rem; font-family: 'Playfair Display', serif;">
+            ¿Cuál es la capacidad de producción de los equipos?</h3>
+          <p style="color: var(--cacao-suave); font-size: 0.95rem;">La maquinaria SEMMCO cubre desde laboratorios
+            artesanales (desde 5 kg por lote con molinos SMJ07) hasta plantas industriales (más de 600 kg/día con líneas
+            continuas y túneles de enfriamiento de 35 metros). El asesor técnico Juan Román Pacheco te ayuda a
+            dimensionar la línea según tu volumen proyectado.</p>
+        </div>
+
+        <div style="border-bottom: 1px solid var(--borde-suave); padding-bottom: 1rem;">
+          <h3
+            style="font-size: 1.1rem; font-weight: 700; color: var(--azul-profundo); margin-bottom: 0.5rem; font-family: 'Playfair Display', serif;">
+            ¿Ofrecen asesoría técnica y soporte postventa en Colombia?</h3>
+          <p style="color: var(--cacao-suave); font-size: 0.95rem;">Sí. HLT Importaciones cuenta con el respaldo técnico
+            del Ingeniero Electrónico Juan Román Pacheco, especialista en automatización de líneas de chocolate. La
+            asesoría incluye layout de planta, puesta en marcha, capacitación operativa y soporte para repuestos
+            originales SEMMCO.</p>
+        </div>
+
+        <div>
+          <h3
+            style="font-size: 1.1rem; font-weight: 700; color: var(--azul-profundo); margin-bottom: 0.5rem; font-family: 'Playfair Display', serif;">
+            ¿Cómo solicito una cotización de maquinaria para chocolate?</h3>
+          <p style="color: var(--cacao-suave); font-size: 0.95rem;">Puedes solicitar una cotización personalizada
+            directamente por WhatsApp al +57 311 258 1129 con Juan Román Pacheco, o utilizando el asistente virtual
+            Román en esta página. Él te guiará con 5 preguntas para entender tu proyecto y enviarte una propuesta
+            técnica detallada.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es una línea Bean-to-Bar y qué incluye?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Una línea Bean-to-Bar es un conjunto integrado de máquinas que transforman el grano de cacao en barra de chocolate. Incluye tostador, descascarillador, molino, temperadora, moldeadora y túnel de enfriamiento. HLT Importaciones ofrece estas líneas completas con equipos SEMMCO de acero inoxidable 304."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuál es la capacidad de producción de los equipos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La maquinaria SEMMCO cubre desde laboratorios artesanales (desde 5 kg por lote) hasta plantas industriales (más de 600 kg/día con líneas continuas y túneles de 35 metros). El asesor técnico Juan Román Pacheco ayuda a dimensionar la línea según el volumen proyectado."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Ofrecen asesoría técnica y soporte postventa en Colombia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. HLT Importaciones cuenta con el respaldo técnico del Ingeniero Electrónico Juan Román Pacheco, especialista en automatización de líneas de chocolate. La asesoría incluye layout de planta, puesta en marcha, capacitación operativa y soporte para repuestos originales SEMMCO."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo solicito una cotización de maquinaria para chocolate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Puedes solicitar una cotización personalizada directamente por WhatsApp al +57 311 258 1129 con Juan Román Pacheco, o utilizando el asistente virtual Román en la página web."
+      }
+    }
+  ]
+}
+</script>
+
+  <!-- CTA FINAL -->
+  <section id="contacto" class="section">
+    <div class="container">
+      <div class="cta-final reveal">
+        <h2>Hablemos de tu <span class="amarillo">proyecto de cacao</span></h2>
+        <p>Cuéntanos qué necesitas: comprar tu primera máquina, escalar tu producción o resolver un problema técnico. Te
+          respondemos directamente.</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/573112581129?text=Hola%20HTL,%20quiero%20hablar%20sobre%20mi%20proyecto%20de%20cacao"
+            target="_blank" rel="noopener" class="btn btn-wa"><i class="fab fa-whatsapp"></i> Escribir por WhatsApp</a>
+          <button id="openRomanFromCTA" class="btn" style="background: var(--dorado); color: var(--azul-oscuro);"><i
+              class="fas fa-comments"></i> Asesoría con Román</button>
+        </div>
+        <div class="cta-info">
+          <div><i class="fab fa-whatsapp"></i><span>+57 311 258 1129</span></div>
+          <div><i class="fas fa-clock"></i><span>Lun a Sáb · 8:00 a 18:00</span></div>
+          <div><i class="fas fa-location-dot"></i><span>Atención en toda Colombia</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="brand-mini">
+        <div class="brand-mini-logo">
+          <img src="logo.png" alt="HLT"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <span class="logo-fallback">HLT</span>
+        </div>
+        <div class="brand-mini-text">
+          <strong>HLT IMPORTACIONES</strong>
+          <span>Y Asesoría en Maquinaria para Chocolatería</span>
+        </div>
+      </div>
+      <p>Consultoría especializada en compra y servicio técnico de maquinaria para la transformación del cacao.</p>
+      <p style="margin-top: 0.6rem;">© <span id="year"></span> HLT Importaciones. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#' || targetId === '') return;
+        const target = document.querySelector(targetId);
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+
+    // CARRITO
+    let cart = [];
+    function saveCart() { localStorage.setItem('hltCart', JSON.stringify(cart)); updateCartUI(); }
+    function loadCart() { const stored = localStorage.getItem('hltCart'); if (stored) cart = JSON.parse(stored); updateCartUI(); }
+    function updateCartUI() {
+      const counter = document.getElementById('cartCounter');
+      const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+      if (counter) counter.innerText = totalItems;
+      renderCartModal();
+    }
+    function addToCart(productData) {
+      const existing = cart.find(item => item.model === productData.model);
+      if (existing) { existing.quantity += 1; }
+      else { cart.push({ name: productData.name, model: productData.model, quantity: 1 }); }
+      saveCart();
+      const btn = document.activeElement;
+      if (btn) btn.style.transform = 'scale(0.95)';
+      setTimeout(() => { if (btn) btn.style.transform = ''; }, 150);
+    }
+    function removeFromCart(index) { cart.splice(index, 1); saveCart(); }
+    function updateQuantity(index, delta) {
+      if (cart[index]) { cart[index].quantity += delta; if (cart[index].quantity <= 0) cart.splice(index, 1); saveCart(); }
+    }
+    function renderCartModal() {
+      const container = document.getElementById('cartItemsList');
+      if (!container) return;
+      if (cart.length === 0) {
+        container.innerHTML = '<p style="text-align:center; padding:2rem; color:#999;">No has agregado equipos aún.</p>';
+        document.getElementById('cartTotalItems').innerText = 'Total: 0 equipos';
+        return;
+      }
+      let html = '';
+      cart.forEach((item, idx) => {
+        html += `
+        <div class="cart-item">
+          <div style="flex:1;"><strong style="color:var(--azul-profundo);">${item.name}</strong><br><small style="color:var(--cacao-suave);">${item.model}</small></div>
+          <div class="qty-controls">
+            <button onclick="updateQuantity(${idx}, -1)">−</button>
+            <span style="font-weight:700;">${item.quantity}</span>
+            <button onclick="updateQuantity(${idx}, 1)">+</button>
+            <button onclick="removeFromCart(${idx})" style="background:none;color:#b85555;"><i class="fas fa-trash-alt"></i></button>
+          </div>
+        </div>`;
+      });
+      container.innerHTML = html;
+      const total = cart.reduce((sum, i) => sum + i.quantity, 0);
+      document.getElementById('cartTotalItems').innerText = `Total: ${total} equipos seleccionados`;
+    }
+    function sendCartToWhatsApp() {
+      if (cart.length === 0) { alert('Agrega al menos un equipo al carrito antes de enviar.'); return; }
+      let message = "Hola Juan Román, me interesa cotizar los siguientes equipos SEMC Cocoa:%0A%0A";
+      cart.forEach(item => { message += `• ${item.name} (${item.model}) x${item.quantity}%0A`; });
+      message += "%0AGracias, espero tu cotización personalizada.";
+      window.open(`https://wa.me/573112581129?text=${message}`, '_blank');
+    }
+    document.querySelectorAll('.add-to-cart').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const card = btn.closest('.product-card');
+        const prodAttr = card.getAttribute('data-prod');
+        if (prodAttr) addToCart(JSON.parse(prodAttr));
+      });
+    });
+    const cartModal = document.getElementById('cartModal');
+    const cartOverlay = document.getElementById('cartOverlay');
+    const cartIcon = document.getElementById('cartIcon');
+    const closeCartBtn = document.getElementById('closeCartBtn');
+    function openCart() { cartModal.classList.add('open'); cartOverlay.classList.add('open'); renderCartModal(); }
+    function closeCart() { cartModal.classList.remove('open'); cartOverlay.classList.remove('open'); }
+    cartIcon.addEventListener('click', openCart);
+    closeCartBtn.addEventListener('click', closeCart);
+    cartOverlay.addEventListener('click', closeCart);
+    document.getElementById('sendWhatsappCartBtn').addEventListener('click', sendCartToWhatsApp);
+    loadCart();
+  </script>
+
+  <script>
+    /* CHATBOT ROMÁN */
+    const BOT_CONFIG = {
+      botName: "Román",
+      botInitial: "R",
+      botRole: "Asesor HTL",
+      company: "HTL Importaciones y Asesoría",
+      sector: "Importación y asesoría en maquinaria para chocolatería",
+      valueProp: "Del grano a la barra con tecnología industrial, respaldado por Ing. Juan Román Pacheco.",
+      whatsappNumber: "573112581129",
+      whatsappDisplay: "+57 311 258 1129",
+      humanName: "Juan Román Pacheco",
+      welcome: "¡Hola! Soy Román, asesor virtual de HTL Importaciones. Estoy aquí para ayudarte a identificar la mejor solución en maquinaria para chocolatería. Te haré 5 preguntas rápidas y te conectaré con nuestro ingeniero especialista. 🍫",
+      fallback: "No entendí bien. ¿Podrías elegir una de las opciones o contarme un poco más?",
+      priceReply: "Los precios dependen de la configuración y capacidad. Te conecto con Juan Román para una cotización precisa según tu proyecto. 📋",
+      humanReply: "Perfecto, te conecto con Juan Román ahora mismo.",
+      thanksReply: "¡Con gusto! Si necesitas algo más, aquí estaré. 😊",
+      questions: [
+        {
+          id: "interes",
+          text: "¿Qué tipo de solución buscas para tu proyecto de cacao o chocolate?",
+          options: [
+            { label: "🏭 Línea completa Bean-to-Bar", value: "Línea completa Bean-to-Bar" },
+            { label: "🔥 Tostado y descascarillado", value: "Tostado y descascarillado" },
+            { label: "⚙️ Molienda y refinado", value: "Molienda y refinado" },
+            { label: "❄️ Temperado y moldeado", value: "Temperado y moldeado" },
+            { label: "🧪 Alcalinización de cacao", value: "Alcalinización de cacao" },
+            { label: "📦 Envasado y empaque", value: "Envasado y empaque" },
+            { label: "Otro / no estoy seguro", value: "Otro / requiere asesoría" }
+          ]
+        },
+        {
+          id: "perfil",
+          text: "¿Cuál es tu perfil de proyecto?",
+          options: [
+            { label: "🧑‍🍳 Emprendedor artesanal", value: "Emprendedor artesanal" },
+            { label: "🏪 PyME chocolatera", value: "PyME chocolatera" },
+            { label: "🏭 Planta industrial", value: "Planta industrial" },
+            { label: "🎓 Universidad / laboratorio", value: "Universidad o laboratorio" },
+            { label: "🌱 Asociación cacaotera", value: "Asociación cacaotera" }
+          ]
+        },
+        {
+          id: "volumen",
+          text: "¿Qué volumen de producción manejas o proyectas?",
+          options: [
+            { label: "Menos de 10 kg/día", value: "< 10 kg/día" },
+            { label: "10 a 60 kg/día", value: "10 - 60 kg/día" },
+            { label: "60 a 600 kg/día", value: "60 - 600 kg/día" },
+            { label: "Más de 600 kg/día", value: "> 600 kg/día" },
+            { label: "Aún no lo defino", value: "Por definir" }
+          ]
+        },
+        {
+          id: "urgencia",
+          text: "¿En qué plazo planeas implementar el proyecto?",
+          options: [
+            { label: "🔴 Inmediato (menos de 1 mes)", value: "Inmediato (< 1 mes)" },
+            { label: "🟡 Corto plazo (1 a 3 meses)", value: "Corto plazo (1-3 meses)" },
+            { label: "🟢 Mediano plazo (3 a 6 meses)", value: "Mediano plazo (3-6 meses)" },
+            { label: "🔵 Largo plazo (más de 6 meses)", value: "Largo plazo (> 6 meses)" },
+            { label: "Explorando posibilidades", value: "Solo explorando" }
+          ]
+        },
+        {
+          id: "contexto",
+          text: "Última pregunta: ¿ya tienes alguna experiencia con maquinaria para cacao?",
+          options: [
+            { label: "Sí, tengo planta operando", value: "Planta operando" },
+            { label: "Sí, tengo equipos básicos", value: "Equipos básicos" },
+            { label: "No, es mi primer proyecto", value: "Primer proyecto" },
+            { label: "Estoy ampliando o mejorando", value: "Ampliación / mejora" }
+          ]
+        }
+      ],
+      intentions: {
+        price: /(precio|costo|cu[aá]nto|vale|tarifa|cotiza|valor|presupuesto)/i,
+        human: /(humano|persona|asesor|juan|rom[aá]n|hablar|llamar|whatsapp)/i,
+        thanks: /(gracias|thank|mil gracias|ok, gracias)/i
+      }
+    };
+
+    const STORAGE_KEY = "roman_chat_state_v2";
+    let state = { open: false, step: 0, started: false, answers: {}, history: [], completed: false };
+
+    function saveState() { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) { } }
+    function loadState() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return;
+        const parsed = JSON.parse(raw);
+        if (parsed && typeof parsed === "object") state = Object.assign(state, parsed);
+      } catch (e) { }
+    }
+
+    const romanWindow = document.getElementById("roman-window");
+    const romanBody = document.getElementById("roman-body");
+    const romanInput = document.getElementById("roman-input");
+    const romanLauncher = document.getElementById("roman-launcher");
+    const romanClose = document.getElementById("roman-close");
+    const romanSend = document.getElementById("roman-send");
+
+    function scrollBottom() { requestAnimationFrame(() => { romanBody.scrollTop = romanBody.scrollHeight; }); }
+
+    function addMessage(role, text, persist = true) {
+      const msg = document.createElement("div");
+      msg.className = "roman-msg " + role;
+      msg.textContent = text;
+      romanBody.appendChild(msg);
+      scrollBottom();
+      if (persist) { state.history.push({ role, text }); saveState(); }
+    }
+
+    function showTyping(callback, delay = 700) {
+      const typing = document.createElement("div");
+      typing.className = "roman-typing";
+      typing.innerHTML = "<span></span><span></span><span></span>";
+      romanBody.appendChild(typing);
+      scrollBottom();
+      setTimeout(() => { typing.remove(); if (callback) callback(); }, delay);
+    }
+
+    function clearOptions() {
+      romanBody.querySelectorAll(".roman-options, .roman-summary, .roman-wa-btn").forEach(el => el.remove());
+    }
+
+    function renderOptions(question) {
+      clearOptions();
+      const wrapper = document.createElement("div");
+      wrapper.className = "roman-options";
+      question.options.forEach(opt => {
+        const btn = document.createElement("button");
+        btn.className = "roman-option";
+        btn.textContent = opt.label;
+        btn.addEventListener("click", () => handleAnswer(question.id, opt.value));
+        wrapper.appendChild(btn);
+      });
+      romanBody.appendChild(wrapper);
+      scrollBottom();
+    }
+
+    function renderSummaryAndCTA() {
+      clearOptions();
+      const a = state.answers;
+      const card = document.createElement("div");
+      card.className = "roman-summary";
+      card.innerHTML = `
+    <h4>📋 Resumen de tu solicitud</h4>
+    <div class="roman-summary-row"><span class="label">Interés</span><span class="value">${a.interes || "-"}</span></div>
+    <div class="roman-summary-row"><span class="label">Perfil</span><span class="value">${a.perfil || "-"}</span></div>
+    <div class="roman-summary-row"><span class="label">Volumen</span><span class="value">${a.volumen || "-"}</span></div>
+    <div class="roman-summary-row"><span class="label">Plazo</span><span class="value">${a.urgencia || "-"}</span></div>
+    <div class="roman-summary-row"><span class="label">Experiencia</span><span class="value">${a.contexto || "-"}</span></div>
+  `;
+      romanBody.appendChild(card);
+
+      const waBtn = document.createElement("a");
+      waBtn.className = "roman-wa-btn";
+      waBtn.target = "_blank";
+      waBtn.rel = "noopener";
+      waBtn.href = buildWhatsAppLink();
+      waBtn.innerHTML = `
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    Enviar resumen a ${BOT_CONFIG.humanName}
+  `;
+      waBtn.addEventListener("click", () => { state.completed = true; saveState(); });
+      romanBody.appendChild(waBtn);
+      scrollBottom();
+    }
+
+    function buildWhatsAppLink() {
+      const a = state.answers;
+      const lines = [
+        `Hola ${BOT_CONFIG.humanName}, vengo del asistente virtual Román de HTL Importaciones. 🍫`,
+        ``,
+        `📋 Mi solicitud:`,
+        `• Interés: ${a.interes || "-"}`,
+        `• Perfil: ${a.perfil || "-"}`,
+        `• Volumen: ${a.volumen || "-"}`,
+        `• Plazo: ${a.urgencia || "-"}`,
+        `• Experiencia: ${a.contexto || "-"}`,
+        ``,
+        `¿Me puedes asesorar con una cotización personalizada?`
+      ];
+      return `https://wa.me/${BOT_CONFIG.whatsappNumber}?text=${encodeURIComponent(lines.join("\n"))}`;
+    }
+
+    function startFlow() {
+      state.started = true;
+      state.step = 1;
+      saveState();
+      showTyping(() => {
+        addMessage("bot", BOT_CONFIG.questions[0].text);
+        renderOptions(BOT_CONFIG.questions[0]);
+      }, 600);
+    }
+
+    function handleAnswer(questionId, value) {
+      state.answers[questionId] = value;
+      state.history.push({ role: "user", text: value });
+      saveState();
+      addMessage("user", value, false);
+      state.step++;
+      saveState();
+      if (state.step > BOT_CONFIG.questions.length) {
+        showTyping(() => {
+          addMessage("bot", "¡Excelente! Ya tengo todo lo que necesito para conectarte con " + BOT_CONFIG.humanName + ". Aquí está el resumen de tu solicitud:");
+          renderSummaryAndCTA();
+        }, 800);
+      } else {
+        const nextQ = BOT_CONFIG.questions[state.step - 1];
+        showTyping(() => {
+          addMessage("bot", nextQ.text);
+          renderOptions(nextQ);
+        }, 700);
+      }
+    }
+
+    function detectIntent(text) {
+      const t = text.trim();
+      if (BOT_CONFIG.intentions.price.test(t)) return "price";
+      if (BOT_CONFIG.intentions.human.test(t)) return "human";
+      if (BOT_CONFIG.intentions.thanks.test(t)) return "thanks";
+      return null;
+    }
+
+    function handleFreeText(text) {
+      if (!text.trim()) return;
+      addMessage("user", text, false);
+      state.history.push({ role: "user", text });
+      saveState();
+      const intent = detectIntent(text);
+
+      if (intent === "price") {
+        showTyping(() => {
+          addMessage("bot", BOT_CONFIG.priceReply);
+          const btn = document.createElement("button");
+          btn.className = "roman-wa-btn";
+          btn.innerHTML = `💬 Hablar con ${BOT_CONFIG.humanName}`;
+          btn.addEventListener("click", () => window.open(buildWhatsAppLink(), "_blank"));
+          romanBody.appendChild(btn);
+          scrollBottom();
+        }, 800);
+        return;
+      }
+      if (intent === "human") {
+        showTyping(() => {
+          addMessage("bot", BOT_CONFIG.humanReply);
+          const btn = document.createElement("button");
+          btn.className = "roman-wa-btn";
+          btn.innerHTML = `💬 Ir a WhatsApp con ${BOT_CONFIG.humanName}`;
+          btn.addEventListener("click", () => window.open(buildWhatsAppLink(), "_blank"));
+          romanBody.appendChild(btn);
+          scrollBottom();
+        }, 700);
+        return;
+      }
+      if (intent === "thanks") {
+        showTyping(() => addMessage("bot", BOT_CONFIG.thanksReply), 600);
+        return;
+      }
+      showTyping(() => {
+        addMessage("bot", BOT_CONFIG.fallback);
+        if (state.step >= 1 && state.step <= BOT_CONFIG.questions.length) {
+          renderOptions(BOT_CONFIG.questions[state.step - 1]);
+        } else if (state.completed) {
+          renderSummaryAndCTA();
+        } else {
+          const btn = document.createElement("button");
+          btn.className = "roman-option";
+          btn.textContent = "🔄 Iniciar asesoría desde el principio";
+          btn.addEventListener("click", restartFlow);
+          romanBody.appendChild(btn);
+          scrollBottom();
+        }
+      }, 700);
+    }
+
+    function restartFlow() {
+      state.step = 0; state.started = false;
+      state.answers = {}; state.completed = false;
+      state.history = [];
+      saveState();
+      romanBody.innerHTML = "";
+      showTyping(() => {
+        addMessage("bot", BOT_CONFIG.welcome);
+        startFlow();
+      }, 500);
+    }
+
+    function renderFromState() {
+      romanBody.innerHTML = "";
+      if (!state.started) {
+        addMessage("bot", BOT_CONFIG.welcome);
+        startFlow();
+        return;
+      }
+      state.history.forEach(m => addMessage(m.role, m.text, false));
+      if (state.completed) {
+        renderSummaryAndCTA();
+      } else if (state.step >= 1 && state.step <= BOT_CONFIG.questions.length) {
+        renderOptions(BOT_CONFIG.questions[state.step - 1]);
+      } else if (state.step > BOT_CONFIG.questions.length) {
+        renderSummaryAndCTA();
+      }
+    }
+
+    function openChat() {
+      romanWindow.classList.add("roman-open");
+      state.open = true;
+      saveState();
+      renderFromState();
+      setTimeout(() => romanInput.focus(), 300);
+    }
+    function closeChat() {
+      romanWindow.classList.remove("roman-open");
+      state.open = false;
+      saveState();
+    }
+
+    romanLauncher.addEventListener("click", () => { if (state.open) closeChat(); else openChat(); });
+    romanClose.addEventListener("click", closeChat);
+    romanSend.addEventListener("click", () => { const t = romanInput.value; romanInput.value = ""; handleFreeText(t); });
+    romanInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" && !e.shiftKey) {
+        e.preventDefault();
+        const t = romanInput.value; romanInput.value = "";
+        handleFreeText(t);
+      }
+    });
+
+    const openRomanFromCTA = document.getElementById('openRomanFromCTA');
+    if (openRomanFromCTA) {
+      openRomanFromCTA.addEventListener('click', () => {
+        if (!state.open) openChat();
+        setTimeout(() => romanInput.focus(), 300);
+      });
+    }
+
+    loadState();
+    if (state.open) {
+      romanWindow.classList.add("roman-open");
+      renderFromState();
+    }
+  </script>
+
+</body>
+
+</html>
