@@ -7,30 +7,27 @@
   <title>HTL Importaciones | Maquinaria Profesional para Cacao y Chocolate</title>
 
   <meta name="description"
-    content="Representación oficial de SEMMCO Cocoa en Colombia. Maquinaria industrial para tostado, molienda, temperado, enrobing y alcalinización. Asesoría experta de Ing. Juan Román Pacheco.">
+    content="Maquinaria industrial para tostado, molienda, temperado, enrobing y alcalinización. Asesoría experta en Colombia.">
   <meta name="theme-color" content="#1F2A44">
 
   <!-- === 1. SEO AVANZADO Y REDES SOCIALES === -->
   <link rel="canonical" href="https://hltimportaciones.netlify.app/">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
-  <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hltimportaciones.netlify.app/">
   <meta property="og:title" content="HLT Importaciones | Maquinaria Profesional para Cacao y Chocolate">
   <meta property="og:description"
-    content="Representación oficial de SEMMCO Cocoa en Colombia. Maquinaria industrial para tostado, molienda, temperado, enrobing y alcalinización. Asesoría experta de Ing. Juan Román Pacheco.">
+    content="Maquinaria industrial para tostado, molienda, temperado, enrobing y alcalinización. Asesoría experta en Colombia.">
   <meta property="og:image" content="https://hltimportaciones.netlify.app/logo-hero.png">
   <meta property="og:locale" content="es_CO">
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="HLT Importaciones | Maquinaria Profesional para Cacao y Chocolate">
   <meta name="twitter:description"
-    content="Representación oficial de SEMMCO Cocoa en Colombia. Asesoría experta para proyectos Bean-to-Bar.">
+    content="Asesoría experta para proyectos Bean-to-Bar y maquinaria industrial de cacao.">
   <meta name="twitter:image" content="https://hltimportaciones.netlify.app/logo-hero.png">
 
-  <!-- Metadatos de Negocio Local -->
   <meta name="geo.region" content="CO">
   <meta name="geo.placename" content="Colombia">
 
@@ -49,7 +46,7 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-  <!-- === 2. DATOS ESTRUCTURADOS JSON-LD (Identidad para Google e IA) === -->
+  <!-- === 2. DATOS ESTRUCTURADOS JSON-LD === -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -58,13 +55,7 @@
     "alternateName": "HLT Importaciones",
     "url": "https://hltimportaciones.netlify.app/",
     "logo": "https://hltimportaciones.netlify.app/logo.png",
-    "description": "Representación oficial de SEMMCO Cocoa en Colombia. Maquinaria profesional para la transformación del cacao y producción de chocolate.",
-    "founder": {
-      "@type": "Person",
-      "name": "Juan Román Pacheco Halat",
-      "jobTitle": "Ingeniero Electrónico y Asesor Técnico",
-      "knowsAbout": ["Maquinaria para cacao", "Bean-to-Bar", "Automatización de líneas de chocolate"]
-    },
+    "description": "Maquinaria profesional para la transformación del cacao y producción de chocolate.",
     "areaServed": {
       "@type": "Country",
       "name": "Colombia"
@@ -76,7 +67,7 @@
       "availableLanguage": "Spanish"
     },
     "sameAs": [
-      "https://wa.me/573112581129", 
+      "https://wa.me/573112581129",
       "https://www.instagram.com/hltimportaciones"
     ]
   }
@@ -97,9 +88,6 @@
   </script>
 
   <style>
-    /* [MANTEN TODOS TUS ESTILOS CSS AQUÍ SIN CAMBIOS] */
-    /* Por brevedad, no los repito todos, pero asegúrate de pegar el bloque <style> completo de tu versión anterior. */
-
     /* ============================================================
        HTL — Paleta tierra sofisticada
        ============================================================ */
@@ -121,7 +109,6 @@
       --borde-suave: rgba(61, 46, 34, 0.08);
       --sombra-suave: 0 10px 30px -14px rgba(31, 42, 68, 0.12);
       --sombra-hover: 0 25px 45px -18px rgba(31, 42, 68, 0.2);
-      --sombra-logo: 0 4px 14px -4px rgba(31, 42, 68, 0.15);
     }
 
     * {
@@ -234,6 +221,9 @@
       font-size: 1.05rem;
     }
 
+    /* ============================================================
+       HEADER
+       ============================================================ */
     header {
       position: sticky;
       top: 0;
@@ -345,6 +335,30 @@
       color: var(--dorado-oscuro);
     }
 
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .nav-instagram {
+      color: var(--azul-profundo);
+      font-size: 1.3rem;
+      transition: all 0.25s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.4rem;
+      border-radius: 50%;
+      text-decoration: none;
+    }
+
+    .nav-instagram:hover {
+      color: var(--dorado-oscuro);
+      background: var(--crema-oscura);
+      transform: translateY(-2px);
+    }
+
     .cart-icon {
       position: relative;
       cursor: pointer;
@@ -381,10 +395,6 @@
         padding: 4px;
       }
 
-      .brand-logo .logo-fallback {
-        font-size: 1.3rem;
-      }
-
       .brand-text strong {
         font-size: 0.95rem;
       }
@@ -395,6 +405,9 @@
       }
     }
 
+    /* ============================================================
+       HERO
+       ============================================================ */
     .hero {
       position: relative;
       background: radial-gradient(circle at 15% 20%, rgba(201, 169, 97, 0.16) 0%, transparent 45%), radial-gradient(circle at 85% 80%, rgba(31, 42, 68, 0.06) 0%, transparent 55%), linear-gradient(160deg, #FAF8F3 0%, #F0EBE0 100%);
@@ -524,7 +537,7 @@
       display: block;
     }
 
-    .hero-visual .logo-slot .logo-fallback-lg {
+    .hero-visual .logo-fallback-lg {
       display: none;
       flex-direction: column;
       align-items: center;
@@ -532,7 +545,7 @@
       text-align: center;
     }
 
-    .hero-visual .logo-slot .logo-fallback-lg strong {
+    .hero-visual .logo-fallback-lg strong {
       font-family: 'Playfair Display', serif;
       font-weight: 800;
       font-size: 3.2rem;
@@ -545,18 +558,12 @@
       color: transparent;
     }
 
-    .hero-visual .logo-slot .logo-fallback-lg small {
+    .hero-visual .logo-fallback-lg small {
       font-size: 0.68rem;
       font-weight: 600;
       letter-spacing: 2px;
       text-transform: uppercase;
       color: var(--cacao-suave);
-    }
-
-    .hero-visual .logo-slot i {
-      font-size: 3.5rem;
-      color: var(--dorado);
-      opacity: 0.55;
     }
 
     .hero-visual .mini-badges {
@@ -612,6 +619,9 @@
       }
     }
 
+    /* ============================================================
+       CATÁLOGO Y TARJETAS DE PRODUCTO
+       ============================================================ */
     .product-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -654,10 +664,21 @@
       transform: scaleX(1);
     }
 
-    .product-card .icon {
-      font-size: 1.6rem;
-      color: var(--dorado-oscuro);
-      margin-bottom: 0.8rem;
+    /* NUEVO: Estilos para las imágenes de los productos */
+    .product-image {
+      width: 100%;
+      height: 220px;
+      object-fit: contain;
+      background-color: var(--crema);
+      border-radius: 14px;
+      margin-bottom: 1.2rem;
+      padding: 1rem;
+      border: 1px solid var(--borde-suave);
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover .product-image {
+      transform: scale(1.02);
     }
 
     .product-card h4 {
@@ -716,6 +737,9 @@
       transform: translateY(-1px);
     }
 
+    /* ============================================================
+       PROCESO
+       ============================================================ */
     .process-wrap {
       background: linear-gradient(150deg, var(--azul-profundo) 0%, var(--azul-oscuro) 100%);
       border-radius: 40px;
@@ -821,6 +845,9 @@
       color: rgba(250, 248, 243, 0.55);
     }
 
+    /* ============================================================
+       SOBRE HLT
+       ============================================================ */
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -934,12 +961,6 @@
       color: var(--cacao-suave);
     }
 
-    .about-visual .img-slot i {
-      font-size: 3rem;
-      color: var(--dorado);
-      opacity: 0.5;
-    }
-
     .about-visual .badges-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -983,6 +1004,9 @@
       }
     }
 
+    /* ============================================================
+       CTA FINAL
+       ============================================================ */
     .cta-final {
       background: linear-gradient(140deg, var(--azul-profundo) 0%, var(--azul-oscuro) 100%);
       border-radius: 40px;
@@ -1072,6 +1096,9 @@
       font-size: 1.05rem;
     }
 
+    /* ============================================================
+       FOOTER
+       ============================================================ */
     footer {
       padding: 3rem 0 2rem;
       text-align: center;
@@ -1144,6 +1171,43 @@
       text-transform: uppercase;
     }
 
+    .footer-socials {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-socials a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--cacao-suave);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+      padding: 0.5rem 1rem;
+      border-radius: 40px;
+      border: 1px solid var(--borde-suave);
+      background: var(--blanco);
+    }
+
+    .footer-socials a:hover {
+      color: var(--azul-profundo);
+      border-color: var(--dorado);
+      box-shadow: 0 4px 10px rgba(31, 42, 68, 0.08);
+    }
+
+    .footer-socials a i {
+      font-size: 1.1rem;
+      color: #E1306C;
+    }
+
+    /* ============================================================
+       WHATSAPP FLOTANTE
+       ============================================================ */
     .wa-float {
       position: fixed;
       bottom: 26px;
@@ -1197,6 +1261,9 @@
       }
     }
 
+    /* ============================================================
+       CARRITO
+       ============================================================ */
     .cart-overlay {
       display: none;
       position: fixed;
@@ -1270,6 +1337,9 @@
       justify-content: center;
     }
 
+    /* ============================================================
+       REVEAL & CHATBOT
+       ============================================================ */
     .reveal {
       opacity: 0;
       transform: translateY(28px);
@@ -1281,8 +1351,7 @@
       transform: translateY(0);
     }
 
-    /* CHATBOT ROMÁN */
-    #roman-launcher {
+    #asesor-launcher {
       position: fixed;
       bottom: 26px;
       left: 26px;
@@ -1299,19 +1368,19 @@
       justify-content: center;
       box-shadow: 0 10px 30px rgba(31, 42, 68, 0.35);
       transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.1);
-      animation: romanPulse 2.8s infinite;
+      animation: pulseAsesor 2.8s infinite;
     }
 
-    #roman-launcher:hover {
+    #asesor-launcher:hover {
       transform: scale(1.08);
     }
 
-    #roman-launcher svg {
+    #asesor-launcher svg {
       width: 26px;
       height: 26px;
     }
 
-    #roman-launcher .roman-dot {
+    #asesor-launcher .asesor-dot {
       position: absolute;
       top: 4px;
       right: 4px;
@@ -1322,7 +1391,7 @@
       border: 2px solid var(--azul-profundo);
     }
 
-    @keyframes romanPulse {
+    @keyframes pulseAsesor {
 
       0%,
       100% {
@@ -1334,7 +1403,7 @@
       }
     }
 
-    #roman-window {
+    #asesor-window {
       position: fixed;
       bottom: 100px;
       left: 26px;
@@ -1356,13 +1425,13 @@
       transition: opacity 0.35s cubic-bezier(0.2, 0.9, 0.3, 1.1), transform 0.35s cubic-bezier(0.2, 0.9, 0.3, 1.1);
     }
 
-    #roman-window.roman-open {
+    #asesor-window.asesor-open {
       opacity: 1;
       transform: translateY(0) scale(1);
       pointer-events: auto;
     }
 
-    .roman-header {
+    .asesor-header {
       padding: 16px 18px;
       background: linear-gradient(135deg, var(--azul-profundo) 0%, var(--azul-oscuro) 100%);
       border-bottom: 1px solid rgba(201, 169, 97, 0.2);
@@ -1371,7 +1440,7 @@
       gap: 12px;
     }
 
-    .roman-avatar {
+    .asesor-avatar {
       width: 42px;
       height: 42px;
       border-radius: 50%;
@@ -1387,12 +1456,12 @@
       border: 1px solid rgba(250, 248, 243, 0.2);
     }
 
-    .roman-header-info {
+    .asesor-header-info {
       flex: 1;
       min-width: 0;
     }
 
-    .roman-header-info h3 {
+    .asesor-header-info h3 {
       font-family: 'Playfair Display', serif;
       font-size: 1.15rem;
       font-weight: 700;
@@ -1400,7 +1469,7 @@
       letter-spacing: 0.3px;
     }
 
-    .roman-header-info p {
+    .asesor-header-info p {
       font-size: 0.72rem;
       color: rgba(250, 248, 243, 0.65);
       display: flex;
@@ -1409,7 +1478,7 @@
       margin-top: 2px;
     }
 
-    .roman-status-dot {
+    .asesor-status-dot {
       width: 7px;
       height: 7px;
       border-radius: 50%;
@@ -1417,7 +1486,7 @@
       box-shadow: 0 0 8px var(--verde-wa);
     }
 
-    .roman-close {
+    .asesor-close {
       background: rgba(250, 248, 243, 0.08);
       border: 1px solid rgba(201, 169, 97, 0.2);
       color: var(--crema);
@@ -1433,11 +1502,11 @@
       transition: background 0.2s;
     }
 
-    .roman-close:hover {
+    .asesor-close:hover {
       background: rgba(250, 248, 243, 0.16);
     }
 
-    .roman-body {
+    .asesor-body {
       flex: 1;
       overflow-y: auto;
       padding: 18px 16px;
@@ -1448,26 +1517,26 @@
       scrollbar-color: rgba(201, 169, 97, 0.25) transparent;
     }
 
-    .roman-body::-webkit-scrollbar {
+    .asesor-body::-webkit-scrollbar {
       width: 5px;
     }
 
-    .roman-body::-webkit-scrollbar-thumb {
+    .asesor-body::-webkit-scrollbar-thumb {
       background: rgba(201, 169, 97, 0.25);
       border-radius: 10px;
     }
 
-    .roman-msg {
+    .asesor-msg {
       max-width: 85%;
       padding: 11px 15px;
       border-radius: 16px;
       font-size: 0.9rem;
       line-height: 1.5;
-      animation: romanFadeIn 0.4s cubic-bezier(0.2, 0.9, 0.3, 1.1);
+      animation: asesorFadeIn 0.4s cubic-bezier(0.2, 0.9, 0.3, 1.1);
       word-wrap: break-word;
     }
 
-    .roman-msg.bot {
+    .asesor-msg.bot {
       background: rgba(250, 248, 243, 0.06);
       color: var(--crema);
       border-bottom-left-radius: 4px;
@@ -1475,7 +1544,7 @@
       border: 1px solid rgba(201, 169, 97, 0.12);
     }
 
-    .roman-msg.user {
+    .asesor-msg.user {
       background: linear-gradient(135deg, var(--dorado-oscuro) 0%, var(--dorado) 100%);
       color: var(--azul-oscuro);
       border-bottom-right-radius: 4px;
@@ -1483,17 +1552,7 @@
       font-weight: 500;
     }
 
-    .roman-msg.system {
-      background: rgba(201, 169, 97, 0.12);
-      color: var(--dorado-claro);
-      border: 1px solid rgba(201, 169, 97, 0.3);
-      font-size: 0.82rem;
-      text-align: center;
-      align-self: center;
-      max-width: 95%;
-    }
-
-    @keyframes romanFadeIn {
+    @keyframes asesorFadeIn {
       from {
         opacity: 0;
         transform: translateY(8px);
@@ -1505,7 +1564,7 @@
       }
     }
 
-    .roman-typing {
+    .asesor-typing {
       display: flex;
       gap: 4px;
       padding: 12px 16px;
@@ -1517,23 +1576,23 @@
       border: 1px solid rgba(201, 169, 97, 0.12);
     }
 
-    .roman-typing span {
+    .asesor-typing span {
       width: 7px;
       height: 7px;
       border-radius: 50%;
       background: rgba(201, 169, 97, 0.6);
-      animation: romanBounce 1.2s infinite;
+      animation: asesorBounce 1.2s infinite;
     }
 
-    .roman-typing span:nth-child(2) {
+    .asesor-typing span:nth-child(2) {
       animation-delay: 0.15s;
     }
 
-    .roman-typing span:nth-child(3) {
+    .asesor-typing span:nth-child(3) {
       animation-delay: 0.3s;
     }
 
-    @keyframes romanBounce {
+    @keyframes asesorBounce {
 
       0%,
       60%,
@@ -1548,15 +1607,15 @@
       }
     }
 
-    .roman-options {
+    .asesor-options {
       display: flex;
       flex-direction: column;
       gap: 8px;
       margin-top: 4px;
-      animation: romanFadeIn 0.4s cubic-bezier(0.2, 0.9, 0.3, 1.1);
+      animation: asesorFadeIn 0.4s cubic-bezier(0.2, 0.9, 0.3, 1.1);
     }
 
-    .roman-option {
+    .asesor-option {
       background: rgba(250, 248, 243, 0.04);
       border: 1px solid rgba(201, 169, 97, 0.28);
       color: var(--crema);
@@ -1570,26 +1629,26 @@
       line-height: 1.35;
     }
 
-    .roman-option:hover {
+    .asesor-option:hover {
       background: rgba(201, 169, 97, 0.12);
       border-color: var(--dorado);
       transform: translateX(3px);
     }
 
-    .roman-option:active {
+    .asesor-option:active {
       transform: scale(0.98);
     }
 
-    .roman-summary {
+    .asesor-summary {
       background: rgba(201, 169, 97, 0.08);
       border: 1px solid rgba(201, 169, 97, 0.35);
       border-radius: 14px;
       padding: 14px 16px;
       margin-top: 6px;
-      animation: romanFadeIn 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.1);
+      animation: asesorFadeIn 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.1);
     }
 
-    .roman-summary h4 {
+    .asesor-summary h4 {
       font-size: 0.75rem;
       color: var(--dorado);
       text-transform: uppercase;
@@ -1598,7 +1657,7 @@
       font-weight: 700;
     }
 
-    .roman-summary-row {
+    .asesor-summary-row {
       display: flex;
       justify-content: space-between;
       gap: 10px;
@@ -1607,21 +1666,21 @@
       font-size: 0.82rem;
     }
 
-    .roman-summary-row:last-child {
+    .asesor-summary-row:last-child {
       border-bottom: none;
     }
 
-    .roman-summary-row .label {
+    .asesor-summary-row .label {
       color: rgba(250, 248, 243, 0.55);
     }
 
-    .roman-summary-row .value {
+    .asesor-summary-row .value {
       color: var(--crema);
       font-weight: 600;
       text-align: right;
     }
 
-    .roman-wa-btn {
+    .asesor-wa-btn {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1639,22 +1698,22 @@
       cursor: pointer;
       width: 100%;
       font-family: inherit;
-      animation: romanFadeIn 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.1);
+      animation: asesorFadeIn 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.1);
       letter-spacing: 0.2px;
     }
 
-    .roman-wa-btn:hover {
+    .asesor-wa-btn:hover {
       background: var(--verde-wa-oscuro);
       transform: translateY(-2px);
       box-shadow: 0 10px 20px rgba(61, 168, 95, 0.3);
     }
 
-    .roman-wa-btn svg {
+    .asesor-wa-btn svg {
       width: 20px;
       height: 20px;
     }
 
-    .roman-input-area {
+    .asesor-input-area {
       padding: 12px 14px;
       border-top: 1px solid rgba(201, 169, 97, 0.18);
       background: rgba(19, 27, 46, 0.5);
@@ -1663,7 +1722,7 @@
       align-items: center;
     }
 
-    .roman-input-area input {
+    .asesor-input-area input {
       flex: 1;
       background: rgba(250, 248, 243, 0.06);
       border: 1px solid rgba(201, 169, 97, 0.18);
@@ -1676,15 +1735,15 @@
       transition: border-color 0.2s;
     }
 
-    .roman-input-area input:focus {
+    .asesor-input-area input:focus {
       border-color: var(--dorado);
     }
 
-    .roman-input-area input::placeholder {
+    .asesor-input-area input::placeholder {
       color: rgba(250, 248, 243, 0.4);
     }
 
-    .roman-send {
+    .asesor-send {
       width: 40px;
       height: 40px;
       border-radius: 50%;
@@ -1699,18 +1758,18 @@
       transition: all 0.2s;
     }
 
-    .roman-send:hover {
+    .asesor-send:hover {
       background: var(--dorado-claro);
       transform: scale(1.05);
     }
 
-    .roman-send svg {
+    .asesor-send svg {
       width: 18px;
       height: 18px;
     }
 
     @media (max-width: 640px) {
-      #roman-window {
+      #asesor-window {
         bottom: 0;
         left: 0;
         width: 100vw;
@@ -1720,76 +1779,17 @@
         border-radius: 0;
       }
 
-      #roman-launcher {
+      #asesor-launcher {
         bottom: 20px;
         left: 20px;
         width: 56px;
         height: 56px;
       }
 
-      #roman-launcher svg {
+      #asesor-launcher svg {
         width: 24px;
         height: 24px;
       }
-    }
-
-    /* ============================================================
-       NUEVO: Icono de Instagram en el Header
-       ============================================================ */
-    .nav-instagram {
-      color: var(--azul-profundo);
-      font-size: 1.3rem;
-      transition: all 0.25s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.4rem;
-      margin-right: 0.5rem;
-      border-radius: 50%;
-    }
-
-    .nav-instagram:hover {
-      color: var(--dorado-oscuro);
-      background: var(--crema-oscura);
-      transform: translateY(-2px);
-    }
-
-    /* ============================================================
-       NUEVO: Redes Sociales en el Footer
-       ============================================================ */
-    .footer-socials {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .footer-socials a {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--cacao-suave);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-      transition: color 0.2s;
-      padding: 0.5rem 1rem;
-      border-radius: 40px;
-      border: 1px solid var(--borde-suave);
-      background: var(--blanco);
-    }
-
-    .footer-socials a:hover {
-      color: var(--azul-profundo);
-      border-color: var(--dorado);
-      box-shadow: 0 4px 10px rgba(31, 42, 68, 0.08);
-    }
-
-    .footer-socials a i {
-      font-size: 1.1rem;
-      color: #E1306C;
-      /* Color oficial de Instagram */
     }
   </style>
 </head>
@@ -1797,36 +1797,36 @@
 <body>
 
   <!-- BOTÓN FLOTANTE WHATSAPP -->
-  <a href="https://wa.me/573112581129?text=Hola%20Juan%20Román,%20quiero%20asesoría%20experta%20en%20maquinaria%20para%20cacao"
+  <a href="https://wa.me/573112581129?text=Hola,%20quiero%20asesoría%20experta%20en%20maquinaria%20para%20cacao"
     target="_blank" rel="noopener" class="wa-float">
     <i class="fab fa-whatsapp"></i>
-    <span>Consultar con Juan Román</span>
+    <span>Consultar ahora</span>
   </a>
 
-  <!-- BOTÓN FLOTANTE ROMÁN -->
-  <button id="roman-launcher" aria-label="Abrir chat con Román">
+  <!-- BOTÓN FLOTANTE ASESOR -->
+  <button id="asesor-launcher" aria-label="Abrir chat con el asesor">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
       stroke-linejoin="round">
       <path
         d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
     </svg>
-    <span class="roman-dot"></span>
+    <span class="asesor-dot"></span>
   </button>
 
-  <!-- VENTANA DEL CHAT ROMÁN -->
-  <div id="roman-window" role="dialog" aria-label="Asistente Román de HTL Importaciones">
-    <div class="roman-header">
-      <div class="roman-avatar">R</div>
-      <div class="roman-header-info">
-        <h3>Román</h3>
-        <p><span class="roman-status-dot"></span> En línea · Asesor HTL</p>
+  <!-- VENTANA DEL CHAT ASESOR -->
+  <div id="asesor-window" role="dialog" aria-label="Asistente virtual de HTL Importaciones">
+    <div class="asesor-header">
+      <div class="asesor-avatar">A</div>
+      <div class="asesor-header-info">
+        <h3>Asesor HLT</h3>
+        <p><span class="asesor-status-dot"></span> En línea · Asistencia</p>
       </div>
-      <button class="roman-close" id="roman-close" aria-label="Cerrar chat">&times;</button>
+      <button class="asesor-close" id="asesor-close" aria-label="Cerrar chat">&times;</button>
     </div>
-    <div class="roman-body" id="roman-body"></div>
-    <div class="roman-input-area">
-      <input type="text" id="roman-input" placeholder="Escribe tu mensaje..." autocomplete="off">
-      <button class="roman-send" id="roman-send" aria-label="Enviar">
+    <div class="asesor-body" id="asesor-body"></div>
+    <div class="asesor-input-area">
+      <input type="text" id="asesor-input" placeholder="Escribe tu mensaje..." autocomplete="off">
+      <button class="asesor-send" id="asesor-send" aria-label="Enviar">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
           stroke-linejoin="round">
           <line x1="22" y1="2" x2="11" y2="13"></line>
@@ -1853,8 +1853,8 @@
         style="width: 100%; justify-content: center; margin-top: 1rem;">
         <i class="fab fa-whatsapp"></i> Enviar cotización por WhatsApp
       </button>
-      <p style="font-size: 0.7rem; color: var(--cacao-suave); margin-top: 1rem; text-align: center;">Juan Román te
-        responderá directamente con tu cotización personalizada.</p>
+      <p style="font-size: 0.7rem; color: var(--cacao-suave); margin-top: 1rem; text-align: center;">Te responderemos
+        directamente con tu cotización personalizada.</p>
     </div>
   </div>
 
@@ -1880,14 +1880,15 @@
           <a href="#faq">FAQ</a>
           <a href="#contacto">Contacto</a>
         </div>
-        <!-- NUEVO: Enlace a Instagram en el Header -->
-        <a href="https://www.instagram.com/hltimportaciones" target="_blank" rel="noopener" class="nav-instagram"
-          aria-label="Instagram de HLT Importaciones">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <div class="cart-icon" id="cartIcon" aria-label="Abrir carrito">
-          <i class="fas fa-shopping-cart fa-lg" style="color: var(--azul-profundo);"></i>
-          <span id="cartCounter" class="cart-count">0</span>
+        <div class="nav-actions">
+          <a href="https://www.instagram.com/hltimportaciones" target="_blank" rel="noopener" class="nav-instagram"
+            aria-label="Instagram de HLT Importaciones">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <div class="cart-icon" id="cartIcon" aria-label="Abrir carrito">
+            <i class="fas fa-shopping-cart fa-lg" style="color: var(--azul-profundo);"></i>
+            <span id="cartCounter" class="cart-count">0</span>
+          </div>
         </div>
       </nav>
     </div>
@@ -1901,12 +1902,12 @@
           <span class="badge"><i class="fas fa-industry"></i> Tecnología industrial · Bean-to-Bar</span>
           <h1>Del Grano a la Barra con <span class="highlight">Tecnología Industrial</span></h1>
           <p class="lead">Maquinaria profesional para tostado, molienda, temperado, enrobing, alcalinización y procesos
-            complementarios. Representación oficial en Colombia por <strong>Ing. Juan Román Pacheco</strong> — HTL
-            Importaciones.</p>
+            complementarios. Representación oficial en Colombia por <strong>HTL Importaciones</strong>.</p>
           <div class="hero-actions">
             <a href="#catalogo" class="btn btn-primary">Explorar equipos <i class="fas fa-arrow-right"></i></a>
-            <a href="https://wa.me/573112581129?text=Hola%20Juan%20Román,%20quiero%20asesoría%20para%20mi%20proyecto%20de%20cacao"
-              target="_blank" rel="noopener" class="btn btn-wa"><i class="fab fa-whatsapp"></i> Contactar al experto</a>
+            <a href="https://wa.me/573112581129?text=Hola,%20quiero%20asesoría%20para%20mi%20proyecto%20de%20cacao"
+              target="_blank" rel="noopener" class="btn btn-wa"><i class="fab fa-whatsapp"></i> Contactar a un
+              experto</a>
           </div>
           <div class="hero-stats">
             <div class="stat"><strong>+20</strong><span>Años del fabricante</span></div>
@@ -1934,24 +1935,25 @@
     </div>
   </section>
 
-  <!-- CATÁLOGO (Se mantiene igual) -->
+  <!-- CATÁLOGO -->
   <section id="catalogo" class="section" style="background: var(--blanco);">
     <div class="container">
       <div class="section-head reveal">
         <span class="badge"><i class="fas fa-list"></i> Catálogo oficial</span>
         <h2>Maquinaria profesional para cada etapa</h2>
         <p>Equipos en acero inoxidable 304 con control PLC. Agrega al carrito los modelos que necesitas y envía tu
-          cotización directo a Juan Román.</p>
+          cotización directo.</p>
       </div>
 
+      <!-- 1. Preparación del Grano -->
       <div style="margin-bottom: 4rem;" class="reveal">
         <h3
           style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--azul-profundo); font-family: 'Playfair Display', serif;">
-          <i class="fas fa-seedling" style="color: var(--dorado-oscuro);"></i> Preparación del Grano
-        </h3>
+          <i class="fas fa-seedling" style="color: var(--dorado-oscuro);"></i> Preparación del Grano</h3>
         <div class="product-grid">
-          <div class="product-card" data-prod='{"name":"Tostadores industriales","model":"Tostador SEMC"}'>
-            <i class="fas fa-fire icon"></i>
+          <div class="product-card" data-prod='{"name":"Tostadores industriales","model":"Tostador"}'>
+            <img src="tostadores-industriales.png" alt="Tostadores industriales" class="product-image"
+              onerror="this.src='logo-hero.png';">
             <h4>Tostadores industriales</h4>
             <p>Tambor rotatorio con control electrónico de temperatura. Capacidades 8–100 kg/batch para desarrollo de
               aroma y sabor.</p>
@@ -1959,39 +1961,42 @@
             <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
           </div>
           <div class="product-card" data-prod='{"name":"CW200 · Quebrador + Winnower","model":"CW200"}'>
-            <i class="fas fa-cogs icon"></i>
+            <img src="winnower-cw200.png" alt="CW200 Quebrador Winnower" class="product-image"
+              onerror="this.src='logo-hero.png';">
             <h4>CW200 · Quebrador + Winnower</h4>
-            <p>Eficiencia de pelado >78%. Capacidad 80–200 kg/h. Separación precisa de cascarilla y nibs. Motor 0.37 kW.
-            </p>
-            <div class="meta"><span>220V monofásico</span><span>47×98×140 cm</span></div>
+            <p>Eficiencia de pelado >78%. Capacidad 80–200 kg/h. Separación precisa de cascarilla y nibs.</p>
+            <div class="meta"><span>47×98×140 cm</span><span>Motor 0.37 kW</span></div>
             <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
           </div>
           <div class="product-card" data-prod='{"name":"YQ200 · Descascarillador","model":"YQ200"}'>
-            <i class="fas fa-wind icon"></i>
+            <img src="descascarillador-yq200.png" alt="YQ200 Descascarillador" class="product-image"
+              onerror="this.src='logo-hero.png';">
             <h4>YQ200 · Descascarillador</h4>
             <p>200 kg/h, eficiencia 98.5% en dos pasadas. Construcción íntegra en acero inoxidable 304.</p>
-            <div class="meta"><span>380V</span><span>980×890×1280 mm</span></div>
+            <div class="meta"><span>980×890×1280 mm</span><span>150 kg</span></div>
             <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
           </div>
         </div>
       </div>
 
+      <!-- 2. Molienda y Refinado -->
       <div style="margin-bottom: 4rem;" class="reveal">
         <h3
           style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--azul-profundo); font-family: 'Playfair Display', serif;">
-          <i class="fas fa-mortar-pestle" style="color: var(--dorado-oscuro);"></i> Molienda y Refinado
-        </h3>
+          <i class="fas fa-mortar-pestle" style="color: var(--dorado-oscuro);"></i> Molienda y Refinado</h3>
         <div class="product-grid">
           <div class="product-card"
             data-prod='{"name":"SMJ07 / SMJ30 / SMJ60 · Molinos de piedra","model":"SMJ series"}'>
-            <i class="fas fa-gem icon"></i>
+            <img src="molinos-piedra-smj.png" alt="Molinos de piedra SMJ" class="product-image"
+              onerror="this.src='logo-hero.png';">
             <h4>Molinos de piedra SMJ</h4>
             <p>Granito natural, velocidad variable 0–80 rpm. Capacidades 7L (5 kg), 30L (25 kg), 60L (50 kg).</p>
             <div class="meta"><span>Piedra natural</span><span>Acero 304</span></div>
             <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
           </div>
           <div class="product-card" data-prod='{"name":"B12 / B75 / BT180 · Ball Mill","model":"Ball Mill"}'>
-            <i class="fas fa-cogs icon"></i>
+            <img src="molino-bolas-b12-b75.png" alt="Ball Mill B12 B75 BT180" class="product-image"
+              onerror="this.src='logo-hero.png';">
             <h4>Ball Mill B12 / B75 / BT180</h4>
             <p>Refinado fino por debajo de 20 micras. Control de temperatura integrado. BT60/180 combina temperado +
               molienda.</p>
@@ -1999,7 +2004,8 @@
             <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
           </div>
           <div class="product-card" data-prod='{"name":"YYMJ03 / MJ10 · Pre-molino","model":"Pre-grinder"}'>
-            <i class="fas fa-tachometer-alt icon"></i>
+            <img src="pre-molino-yymj03.png" alt="Pre-molino YYMJ03 MJ10" class="product-image"
+              onerror="this.src='logo-hero.png';">
             <h4>Pre-molino YYMJ03 / MJ10</h4>
             <p>Pre-muele nibs hasta convertirlos en pasta antes del refinado. Formato compacto. Producción 3–20 kg/h.
             </p>
@@ -2007,7 +2013,8 @@
             <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
           </div>
           <div class="product-card" data-prod='{"name":"YML50 / 70 / 120L · Piedra industrial","model":"YML series"}'>
-            <i class="fas fa-industry icon"></i>
+            <img src="molinos-piedra-yml.png" alt="YML50 YML70 YML120" class="product-image"
+              onerror="this.src='logo-hero.png';">
             <h4>YML50 / 70 / 120L</h4>
             <p>Serie industrial de molinos de piedra de alta capacidad. Para producción continua y fábricas de
               chocolate.</p>
@@ -2017,54 +2024,58 @@
         </div>
       </div>
 
+      <!-- 3. Temperado de Precisión -->
       <div style="margin-bottom: 4rem;" class="reveal">
         <h3
           style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--azul-profundo); font-family: 'Playfair Display', serif;">
-          <i class="fas fa-temperature-low" style="color: var(--dorado-oscuro);"></i> Temperado de Precisión
-        </h3>
+          <i class="fas fa-temperature-low" style="color: var(--dorado-oscuro);"></i> Temperado de Precisión</h3>
         <div class="product-grid">
           <div class="product-card" data-prod='{"name":"XT260 / XT80 · Temperador continuo","model":"XT series"}'>
-            <i class="fas fa-chart-line icon"></i>
+            <img src="temperador-xt260.png" alt="Temperador continuo XT260" class="product-image"
+              onerror="this.src='logo-hero.png';">
             <h4>Temperador continuo XT260 / XT80</h4>
-            <p>XT260: 260–520 L/h. XT80: 80 L/h. Pantalla táctil, control PID, ahorro de agua >50%. Alimentación 220V
-              monofásica.</p>
-            <div class="meta"><span>Alta producción</span><span>220V</span></div>
+            <p>XT260: 260–520 L/h. XT80: 80 L/h. Pantalla táctil, control PID, ahorro de agua >50%.</p>
+            <div class="meta"><span>Alta producción</span><span>Panel Táctil</span></div>
             <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
           </div>
           <div class="product-card"
             data-prod='{"name":"T30 / T60 / MT30 / MT60 · Temperadores batch","model":"T/MT series"}'>
-            <i class="fas fa-temperature-high icon"></i>
+            <img src="temperadores-t30-t60.png" alt="Temperadores Batch T30 T60" class="product-image"
+              onerror="this.src='logo-hero.png';">
             <h4>Temperadores Batch T30 / T60 / MT30 / MT60</h4>
             <p>Capacidades 30L y 60L. Control digital, agua forzada, agitador raspador. T30: 90 L/h. T60: 180 L/h.</p>
-            <div class="meta"><span>30L / 60L</span><span>220V</span></div>
+            <div class="meta"><span>30L / 60L</span><span>Control Digital</span></div>
             <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
           </div>
           <div class="product-card" data-prod='{"name":"HT03 / HT05 · Sobremesa","model":"HT series"}'>
-            <i class="fas fa-temperature-half icon"></i>
+            <img src="sobremesa-ht03.png" alt="Sobremesa HT03 HT05" class="product-image"
+              onerror="this.src='logo-hero.png';">
             <h4>Sobremesa HT03 / HT05</h4>
             <p>Modelos compactos 4L y 7L para laboratorio y producción artesanal. 250–300W, acero inoxidable 304.</p>
             <div class="meta"><span>4L / 7L</span><span>Sobremesa</span></div>
             <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
           </div>
           <div class="product-card" data-prod='{"name":"BWG75 / BWG150 / BWG500 · Tanques","model":"BWG series"}'>
-            <i class="fas fa-database icon"></i>
+            <img src="tanques-bwg.png" alt="Tanques BWG75 BWG150 BWG500" class="product-image"
+              onerror="this.src='logo-hero.png';">
             <h4>Tanques BWG75 / BWG150 / BWG500</h4>
             <p>Depósitos de fusión y conservación. Triple aislamiento, control digital. Modelos de 75, 150, 500, hasta
               2000 L.</p>
-            <div class="meta"><span>Acero 304</span><span>380V trifásico</span></div>
+            <div class="meta"><span>Acero 304</span><span>Aislamiento</span></div>
             <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
           </div>
         </div>
       </div>
 
+      <!-- 4. Enrobing, Moldeado y Enfriamiento -->
       <div style="margin-bottom: 4rem;" class="reveal">
         <h3
           style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--azul-profundo); font-family: 'Playfair Display', serif;">
-          <i class="fas fa-fill-drip" style="color: var(--dorado-oscuro);"></i> Enrobing, Moldeado y Enfriamiento
-        </h3>
+          <i class="fas fa-fill-drip" style="color: var(--dorado-oscuro);"></i> Enrobing, Moldeado y Enfriamiento</h3>
         <div class="product-grid">
           <div class="product-card" data-prod='{"name":"ER600 / ER1200 / ERG600 · Enrobers","model":"ER series"}'>
-            <i class="fas fa-layer-group icon"></i>
+            <img src="enrobers-er.png" alt="Enrobers ER600 ER1200" class="product-image"
+              onerror="this.src='logo-hero.png';">
             <h4>Enrobers ER600 / ER1200 / ERG600</h4>
             <p>Anchos variables 600–1600 mm. Recubrimiento superior, inferior y total. Bandeja extraíble. Velocidad 1–3
               m/min.</p>
@@ -2072,14 +2083,16 @@
             <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
           </div>
           <div class="product-card" data-prod='{"name":"MM30 / MM60 / MM08 / MM15 · Moldeadoras","model":"MM series"}'>
-            <i class="fas fa-cube icon"></i>
+            <img src="moldeadoras-mm.png" alt="Moldeadoras MM30 MM60" class="product-image"
+              onerror="this.src='logo-hero.png';">
             <h4>Moldeadoras MM30 / MM60 / MM08 / MM15</h4>
             <p>Para tabletas, bombones y barras. Control digital de temperatura. Capacidades 8L, 15L, 30L y 60L.</p>
-            <div class="meta"><span>220V</span><span>Control digital</span></div>
+            <div class="meta"><span>Control digital</span><span>Alta producción</span></div>
             <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
           </div>
           <div class="product-card" data-prod='{"name":"Túneles de enfriamiento","model":"Cooling Tunnel"}'>
-            <i class="fas fa-snowplow icon"></i>
+            <img src="tunel-enfriamiento.png" alt="Túneles de Enfriamiento" class="product-image"
+              onerror="this.src='logo-hero.png';">
             <h4>Túneles de Enfriamiento</h4>
             <p>Longitudes 4.7m, 12m y hasta 35m. Aislamiento sándwich 20mm. Temperatura 5–10°C. Compresores 3P a 25P.
             </p>
@@ -2087,7 +2100,8 @@
             <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
           </div>
           <div class="product-card" data-prod='{"name":"TE400 · Temperado + Coating","model":"TE400"}'>
-            <i class="fas fa-hand-sparkles icon"></i>
+            <img src="temperado-coating-te400.png" alt="TE400 Temperado Coating" class="product-image"
+              onerror="this.src='logo-hero.png';">
             <h4>TE400 · Temperado + Coating</h4>
             <p>Sistema integrado para temperado y recubrimiento continuo. Ancho 400 mm, velocidad 1–3 m/min.</p>
             <div class="meta"><span>Integrado</span><span>Fácil mantenimiento</span></div>
@@ -2096,6 +2110,7 @@
         </div>
       </div>
 
+      <!-- 5. Equipos Especiales -->
       <div style="margin-bottom: 2rem;" class="reveal">
         <h3
           style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--azul-profundo); font-family: 'Playfair Display', serif;">
@@ -2104,7 +2119,8 @@
         <div class="product-grid">
           <div class="product-card" data-prod='{"name":"Impregnated Machine (patente)","model":"Impregnated"}'
             style="border-left: 3px solid var(--dorado);">
-            <i class="fas fa-microchip icon"></i>
+            <img src="maquina-impregnacion.png" alt="Máquina de Impregnación" class="product-image"
+              onerror="this.src='logo-hero.png';">
             <h4>Impregnated Machine</h4>
             <p>Patente CN2016214783393. Infiltra chocolate en snacks porosos. Producto final no se derrite al tacto.
               Ideal para clima tropical.</p>
@@ -2112,22 +2128,24 @@
             <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
           </div>
           <div class="product-card" data-prod='{"name":"6YY-150 · Prensa manteca de cacao","model":"6YY-150"}'>
-            <i class="fas fa-oil-can icon"></i>
+            <img src="prensa-manteca-6yy.png" alt="Prensa hidráulica 6YY-150" class="product-image"
+              onerror="this.src='logo-hero.png';">
             <h4>Prensa hidráulica 6YY-150</h4>
             <p>Extracción de manteca de pasta de cacao. 150 kg/h, presión máxima de 55 MPa. Acero inoxidable.</p>
             <div class="meta"><span>150 kg/h</span><span>55 MPa</span></div>
             <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
           </div>
           <div class="product-card" data-prod='{"name":"SEM-600 / SEM-80 / SEM-60 · Envasadoras","model":"SEM series"}'>
-            <i class="fas fa-boxes icon"></i>
+            <img src="envasadoras-sem.png" alt="Envasadoras SEM-600" class="product-image"
+              onerror="this.src='logo-hero.png';">
             <h4>Envasadoras SEM-600 / SEM-80 / SEM-60</h4>
-            <p>Llenado de líquidos y pastas. 4–15 bolsas/min, control PLC, 380V. SEM-80 y SEM-60 para chocolate sólido.
-            </p>
-            <div class="meta"><span>380V</span><span>Control PLC</span></div>
+            <p>Llenado de líquidos y pastas. 4–15 bolsas/min, control PLC. SEM-80 y SEM-60 para chocolate sólido.</p>
+            <div class="meta"><span>Control PLC</span><span>Alta eficiencia</span></div>
             <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
           </div>
           <div class="product-card" data-prod='{"name":"PG-3 / PG-30 · Pulidoras","model":"PG series"}'>
-            <i class="fas fa-drumstick-bite icon"></i>
+            <img src="pulidoras-pg.png" alt="Pulidoras PG-3 PG-30" class="product-image"
+              onerror="this.src='logo-hero.png';">
             <h4>Pulidoras PG-3 / PG-30</h4>
             <p>Confitado y pulido de grageas y frutos secos. Velocidad variable, control de temperatura. Capacidades 3
               kg y 30 kg.</p>
@@ -2135,17 +2153,18 @@
             <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
           </div>
           <div class="product-card" data-prod='{"name":"PQ01 · Fuente de chocolate","model":"PQ01"}'>
-            <i class="fas fa-chocolate-bar icon"></i>
+            <img src="fuente-chocolate-pq01.png" alt="Fuente de chocolate PQ01" class="product-image"
+              onerror="this.src='logo-hero.png';">
             <h4>Fuente de chocolate PQ01</h4>
-            <p>20 litros, 220V monofásico, 0.6 kW. Cuerpo en acero inoxidable 304 de grado alimenticio.</p>
-            <div class="meta"><span>20 L</span><span>220V</span></div>
+            <p>20 litros, monofásico, 0.6 kW. Cuerpo en acero inoxidable 304 de grado alimenticio.</p>
+            <div class="meta"><span>20 L</span><span>Acero 304</span></div>
             <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
           </div>
           <div class="product-card" data-prod='{"name":"Extrusora industrial JCJ300","model":"Extruder"}'>
-            <i class="fas fa-candy-cane icon"></i>
+            <img src="extrusora-jcj300.png" alt="Extrusora industrial JCJ300" class="product-image"
+              onerror="this.src='logo-hero.png';">
             <h4>Extrusora industrial JCJ300</h4>
-            <p>300 kg/hora. 380V, 4.17 kW. Control PLC. Diseño higiénico para fácil limpieza. Formas personalizables.
-            </p>
+            <p>300 kg/hora. Control PLC. Diseño higiénico para fácil limpieza. Formas personalizables.</p>
             <div class="meta"><span>300 kg/h</span><span>Control PLC</span></div>
             <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
           </div>
@@ -2161,7 +2180,7 @@
         <div class="head">
           <span class="badge"><i class="fas fa-diagram-project"></i> Del grano al producto final</span>
           <h2>Cinco etapas integradas en una sola cadena</h2>
-          <p>SEMMCO integra cada etapa para asegurar continuidad operativa, higiene controlada y reproducibilidad
+          <p>La línea integra cada etapa para asegurar continuidad operativa, higiene controlada y reproducibilidad
             consistente en cada lote.</p>
         </div>
         <div class="process-steps">
@@ -2217,7 +2236,7 @@
     </div>
   </section>
 
-  <!-- === 3. SECCIÓN DE PREGUNTAS FRECUENTES (Optimizada para IA y Google) === -->
+  <!-- FAQ -->
   <section id="faq" class="section" style="background: var(--blanco);">
     <div class="container">
       <div class="section-head reveal">
@@ -2234,27 +2253,25 @@
           <p style="color: var(--cacao-suave); font-size: 0.95rem;">Una línea Bean-to-Bar es un conjunto integrado de
             máquinas que transforman el grano de cacao en barra de chocolate. Incluye tostador, descascarillador
             (winnower), molino (de piedra o bolas), temperadora, moldeadora y túnel de enfriamiento. HLT Importaciones
-            ofrece estas líneas completas con equipos SEMMCO de acero inoxidable 304.</p>
+            ofrece estas líneas completas con equipos de acero inoxidable 304.</p>
         </div>
 
         <div style="border-bottom: 1px solid var(--borde-suave); padding-bottom: 1rem;">
           <h3
             style="font-size: 1.1rem; font-weight: 700; color: var(--azul-profundo); margin-bottom: 0.5rem; font-family: 'Playfair Display', serif;">
             ¿Cuál es la capacidad de producción de los equipos?</h3>
-          <p style="color: var(--cacao-suave); font-size: 0.95rem;">La maquinaria SEMMCO cubre desde laboratorios
-            artesanales (desde 5 kg por lote con molinos SMJ07) hasta plantas industriales (más de 600 kg/día con líneas
-            continuas y túneles de enfriamiento de 35 metros). El asesor técnico Juan Román Pacheco te ayuda a
-            dimensionar la línea según tu volumen proyectado.</p>
+          <p style="color: var(--cacao-suave); font-size: 0.95rem;">La maquinaria cubre desde laboratorios artesanales
+            (desde 5 kg por lote con molinos SMJ07) hasta plantas industriales (más de 600 kg/día con líneas continuas y
+            túneles de enfriamiento de 35 metros). Te ayudamos a dimensionar la línea según tu volumen proyectado.</p>
         </div>
 
         <div style="border-bottom: 1px solid var(--borde-suave); padding-bottom: 1rem;">
           <h3
             style="font-size: 1.1rem; font-weight: 700; color: var(--azul-profundo); margin-bottom: 0.5rem; font-family: 'Playfair Display', serif;">
             ¿Ofrecen asesoría técnica y soporte postventa en Colombia?</h3>
-          <p style="color: var(--cacao-suave); font-size: 0.95rem;">Sí. HLT Importaciones cuenta con el respaldo técnico
-            del Ingeniero Electrónico Juan Román Pacheco, especialista en automatización de líneas de chocolate. La
-            asesoría incluye layout de planta, puesta en marcha, capacitación operativa y soporte para repuestos
-            originales SEMMCO.</p>
+          <p style="color: var(--cacao-suave); font-size: 0.95rem;">Sí. HLT Importaciones cuenta con un equipo de
+            asesores técnicos especialistas en automatización de líneas de chocolate. La asesoría incluye layout de
+            planta, puesta en marcha, capacitación operativa y soporte para repuestos originales.</p>
         </div>
 
         <div>
@@ -2262,9 +2279,8 @@
             style="font-size: 1.1rem; font-weight: 700; color: var(--azul-profundo); margin-bottom: 0.5rem; font-family: 'Playfair Display', serif;">
             ¿Cómo solicito una cotización de maquinaria para chocolate?</h3>
           <p style="color: var(--cacao-suave); font-size: 0.95rem;">Puedes solicitar una cotización personalizada
-            directamente por WhatsApp al +57 311 258 1129 con Juan Román Pacheco, o utilizando el asistente virtual
-            Román en esta página. Él te guiará con 5 preguntas para entender tu proyecto y enviarte una propuesta
-            técnica detallada.</p>
+            directamente por WhatsApp con nuestro equipo o utilizando el asistente virtual en esta página. Él te guiará
+            con 5 preguntas para entender tu proyecto y enviarte una propuesta técnica detallada.</p>
         </div>
       </div>
     </div>
@@ -2280,7 +2296,7 @@
       "name": "¿Qué es una línea Bean-to-Bar y qué incluye?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Una línea Bean-to-Bar es un conjunto integrado de máquinas que transforman el grano de cacao en barra de chocolate. Incluye tostador, descascarillador, molino, temperadora, moldeadora y túnel de enfriamiento. HLT Importaciones ofrece estas líneas completas con equipos SEMMCO de acero inoxidable 304."
+        "text": "Una línea Bean-to-Bar es un conjunto integrado de máquinas que transforman el grano de cacao en barra de chocolate. Incluye tostador, descascarillador, molino, temperadora, moldeadora y túnel de enfriamiento. HLT Importaciones ofrece estas líneas completas con equipos de acero inoxidable 304."
       }
     },
     {
@@ -2288,7 +2304,7 @@
       "name": "¿Cuál es la capacidad de producción de los equipos?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "La maquinaria SEMMCO cubre desde laboratorios artesanales (desde 5 kg por lote) hasta plantas industriales (más de 600 kg/día con líneas continuas y túneles de 35 metros). El asesor técnico Juan Román Pacheco ayuda a dimensionar la línea según el volumen proyectado."
+        "text": "La maquinaria cubre desde laboratorios artesanales (desde 5 kg por lote) hasta plantas industriales (más de 600 kg/día con líneas continuas y túneles de 35 metros). El equipo técnico ayuda a dimensionar la línea según el volumen proyectado."
       }
     },
     {
@@ -2296,7 +2312,7 @@
       "name": "¿Ofrecen asesoría técnica y soporte postventa en Colombia?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí. HLT Importaciones cuenta con el respaldo técnico del Ingeniero Electrónico Juan Román Pacheco, especialista en automatización de líneas de chocolate. La asesoría incluye layout de planta, puesta en marcha, capacitación operativa y soporte para repuestos originales SEMMCO."
+        "text": "Sí. HLT Importaciones cuenta con un equipo de asesores técnicos especialistas en automatización de líneas de chocolate. La asesoría incluye layout de planta, puesta en marcha, capacitación operativa y soporte para repuestos originales."
       }
     },
     {
@@ -2304,7 +2320,7 @@
       "name": "¿Cómo solicito una cotización de maquinaria para chocolate?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Puedes solicitar una cotización personalizada directamente por WhatsApp al +57 311 258 1129 con Juan Román Pacheco, o utilizando el asistente virtual Román en la página web."
+        "text": "Puedes solicitar una cotización personalizada directamente por WhatsApp o utilizando el asistente virtual en la página web."
       }
     }
   ]
@@ -2319,10 +2335,10 @@
         <p>Cuéntanos qué necesitas: comprar tu primera máquina, escalar tu producción o resolver un problema técnico. Te
           respondemos directamente.</p>
         <div class="cta-buttons">
-          <a href="https://wa.me/573112581129?text=Hola%20HTL,%20quiero%20hablar%20sobre%20mi%20proyecto%20de%20cacao"
+          <a href="https://wa.me/573112581129?text=Hola,%20quiero%20hablar%20sobre%20mi%20proyecto%20de%20cacao"
             target="_blank" rel="noopener" class="btn btn-wa"><i class="fab fa-whatsapp"></i> Escribir por WhatsApp</a>
-          <button id="openRomanFromCTA" class="btn" style="background: var(--dorado); color: var(--azul-oscuro);"><i
-              class="fas fa-comments"></i> Asesoría con Román</button>
+          <button id="openAsesorFromCTA" class="btn" style="background: var(--dorado); color: var(--azul-oscuro);"><i
+              class="fas fa-comments"></i> Asesoría en línea</button>
         </div>
         <div class="cta-info">
           <div><i class="fab fa-whatsapp"></i><span>+57 311 258 1129</span></div>
@@ -2348,14 +2364,15 @@
         </div>
       </div>
       <p>Consultoría especializada en compra y servicio técnico de maquinaria para la transformación del cacao.</p>
-      <!-- NUEVO: Redes Sociales en el Footer -->
+
       <div class="footer-socials">
         <a href="https://www.instagram.com/hltimportaciones" target="_blank" rel="noopener"
           aria-label="Instagram de HLT Importaciones">
           <i class="fab fa-instagram"></i> @hltimportaciones
         </a>
       </div>
-      <p style="margin-top: 0.6rem;">© <span id="year"></span> HLT Importaciones. Todos los derechos reservados.</p>
+
+      <p style="margin-top: 1rem;">© <span id="year"></span> HLT Importaciones. Todos los derechos reservados.</p>
     </div>
   </footer>
 
@@ -2431,9 +2448,9 @@
     }
     function sendCartToWhatsApp() {
       if (cart.length === 0) { alert('Agrega al menos un equipo al carrito antes de enviar.'); return; }
-      let message = "Hola Juan Román, me interesa cotizar los siguientes equipos SEMC Cocoa:%0A%0A";
+      let message = "Hola, me interesa cotizar los siguientes equipos para cacao:%0A%0A";
       cart.forEach(item => { message += `• ${item.name} (${item.model}) x${item.quantity}%0A`; });
-      message += "%0AGracias, espero tu cotización personalizada.";
+      message += "%0AGracias, espero su cotización personalizada.";
       window.open(`https://wa.me/573112581129?text=${message}`, '_blank');
     }
     document.querySelectorAll('.add-to-cart').forEach(btn => {
@@ -2457,21 +2474,21 @@
   </script>
 
   <script>
-    /* CHATBOT ROMÁN */
+    /* CHATBOT ASESOR HLT */
     const BOT_CONFIG = {
-      botName: "Román",
-      botInitial: "R",
-      botRole: "Asesor HTL",
-      company: "HTL Importaciones y Asesoría",
-      sector: "Importación y asesoría en maquinaria para chocolatería",
-      valueProp: "Del grano a la barra con tecnología industrial, respaldado por Ing. Juan Román Pacheco.",
+      botName: "Asesor HLT",
+      botInitial: "A",
+      botRole: "Asistente Virtual",
+      company: "HLT Importaciones y Asesoría",
+      sector: "Maquinaria para chocolatería",
+      valueProp: "Del grano a la barra con tecnología industrial.",
       whatsappNumber: "573112581129",
       whatsappDisplay: "+57 311 258 1129",
-      humanName: "Juan Román Pacheco",
-      welcome: "¡Hola! Soy Román, asesor virtual de HTL Importaciones. Estoy aquí para ayudarte a identificar la mejor solución en maquinaria para chocolatería. Te haré 5 preguntas rápidas y te conectaré con nuestro ingeniero especialista. 🍫",
+      humanName: "Equipo HLT",
+      welcome: "¡Hola! Soy el Asistente Virtual de HLT Importaciones. Estoy aquí para ayudarte a identificar la mejor solución en maquinaria para chocolatería. Te haré 5 preguntas rápidas y te conectaré con nuestro equipo de especialistas. 🍫",
       fallback: "No entendí bien. ¿Podrías elegir una de las opciones o contarme un poco más?",
-      priceReply: "Los precios dependen de la configuración y capacidad. Te conecto con Juan Román para una cotización precisa según tu proyecto. 📋",
-      humanReply: "Perfecto, te conecto con Juan Román ahora mismo.",
+      priceReply: "Los precios dependen de la configuración y capacidad. Te conecto con nuestro equipo para una cotización precisa según tu proyecto. 📋",
+      humanReply: "Perfecto, te conecto con el equipo ahora mismo.",
       thanksReply: "¡Con gusto! Si necesitas algo más, aquí estaré. 😊",
       questions: [
         {
@@ -2533,12 +2550,12 @@
       ],
       intentions: {
         price: /(precio|costo|cu[aá]nto|vale|tarifa|cotiza|valor|presupuesto)/i,
-        human: /(humano|persona|asesor|juan|rom[aá]n|hablar|llamar|whatsapp)/i,
+        human: /(humano|persona|asesor|equipo|hablar|llamar|whatsapp)/i,
         thanks: /(gracias|thank|mil gracias|ok, gracias)/i
       }
     };
 
-    const STORAGE_KEY = "roman_chat_state_v2";
+    const STORAGE_KEY = "asesor_chat_state_v2";
     let state = { open: false, step: 0, started: false, answers: {}, history: [], completed: false };
 
     function saveState() { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) { } }
@@ -2551,49 +2568,49 @@
       } catch (e) { }
     }
 
-    const romanWindow = document.getElementById("roman-window");
-    const romanBody = document.getElementById("roman-body");
-    const romanInput = document.getElementById("roman-input");
-    const romanLauncher = document.getElementById("roman-launcher");
-    const romanClose = document.getElementById("roman-close");
-    const romanSend = document.getElementById("roman-send");
+    const asesorWindow = document.getElementById("asesor-window");
+    const asesorBody = document.getElementById("asesor-body");
+    const asesorInput = document.getElementById("asesor-input");
+    const asesorLauncher = document.getElementById("asesor-launcher");
+    const asesorClose = document.getElementById("asesor-close");
+    const asesorSend = document.getElementById("asesor-send");
 
-    function scrollBottom() { requestAnimationFrame(() => { romanBody.scrollTop = romanBody.scrollHeight; }); }
+    function scrollBottom() { requestAnimationFrame(() => { asesorBody.scrollTop = asesorBody.scrollHeight; }); }
 
     function addMessage(role, text, persist = true) {
       const msg = document.createElement("div");
-      msg.className = "roman-msg " + role;
+      msg.className = "asesor-msg " + role;
       msg.textContent = text;
-      romanBody.appendChild(msg);
+      asesorBody.appendChild(msg);
       scrollBottom();
       if (persist) { state.history.push({ role, text }); saveState(); }
     }
 
     function showTyping(callback, delay = 700) {
       const typing = document.createElement("div");
-      typing.className = "roman-typing";
+      typing.className = "asesor-typing";
       typing.innerHTML = "<span></span><span></span><span></span>";
-      romanBody.appendChild(typing);
+      asesorBody.appendChild(typing);
       scrollBottom();
       setTimeout(() => { typing.remove(); if (callback) callback(); }, delay);
     }
 
     function clearOptions() {
-      romanBody.querySelectorAll(".roman-options, .roman-summary, .roman-wa-btn").forEach(el => el.remove());
+      asesorBody.querySelectorAll(".asesor-options, .asesor-summary, .asesor-wa-btn").forEach(el => el.remove());
     }
 
     function renderOptions(question) {
       clearOptions();
       const wrapper = document.createElement("div");
-      wrapper.className = "roman-options";
+      wrapper.className = "asesor-options";
       question.options.forEach(opt => {
         const btn = document.createElement("button");
-        btn.className = "roman-option";
+        btn.className = "asesor-option";
         btn.textContent = opt.label;
         btn.addEventListener("click", () => handleAnswer(question.id, opt.value));
         wrapper.appendChild(btn);
       });
-      romanBody.appendChild(wrapper);
+      asesorBody.appendChild(wrapper);
       scrollBottom();
     }
 
@@ -2601,35 +2618,35 @@
       clearOptions();
       const a = state.answers;
       const card = document.createElement("div");
-      card.className = "roman-summary";
+      card.className = "asesor-summary";
       card.innerHTML = `
     <h4>📋 Resumen de tu solicitud</h4>
-    <div class="roman-summary-row"><span class="label">Interés</span><span class="value">${a.interes || "-"}</span></div>
-    <div class="roman-summary-row"><span class="label">Perfil</span><span class="value">${a.perfil || "-"}</span></div>
-    <div class="roman-summary-row"><span class="label">Volumen</span><span class="value">${a.volumen || "-"}</span></div>
-    <div class="roman-summary-row"><span class="label">Plazo</span><span class="value">${a.urgencia || "-"}</span></div>
-    <div class="roman-summary-row"><span class="label">Experiencia</span><span class="value">${a.contexto || "-"}</span></div>
+    <div class="asesor-summary-row"><span class="label">Interés</span><span class="value">${a.interes || "-"}</span></div>
+    <div class="asesor-summary-row"><span class="label">Perfil</span><span class="value">${a.perfil || "-"}</span></div>
+    <div class="asesor-summary-row"><span class="label">Volumen</span><span class="value">${a.volumen || "-"}</span></div>
+    <div class="asesor-summary-row"><span class="label">Plazo</span><span class="value">${a.urgencia || "-"}</span></div>
+    <div class="asesor-summary-row"><span class="label">Experiencia</span><span class="value">${a.contexto || "-"}</span></div>
   `;
-      romanBody.appendChild(card);
+      asesorBody.appendChild(card);
 
       const waBtn = document.createElement("a");
-      waBtn.className = "roman-wa-btn";
+      waBtn.className = "asesor-wa-btn";
       waBtn.target = "_blank";
       waBtn.rel = "noopener";
       waBtn.href = buildWhatsAppLink();
       waBtn.innerHTML = `
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-    Enviar resumen a ${BOT_CONFIG.humanName}
+    Enviar resumen al ${BOT_CONFIG.humanName}
   `;
       waBtn.addEventListener("click", () => { state.completed = true; saveState(); });
-      romanBody.appendChild(waBtn);
+      asesorBody.appendChild(waBtn);
       scrollBottom();
     }
 
     function buildWhatsAppLink() {
       const a = state.answers;
       const lines = [
-        `Hola ${BOT_CONFIG.humanName}, vengo del asistente virtual Román de HTL Importaciones. 🍫`,
+        `Hola ${BOT_CONFIG.humanName}, vengo del asistente virtual de HTL Importaciones. 🍫`,
         ``,
         `📋 Mi solicitud:`,
         `• Interés: ${a.interes || "-"}`,
@@ -2638,7 +2655,7 @@
         `• Plazo: ${a.urgencia || "-"}`,
         `• Experiencia: ${a.contexto || "-"}`,
         ``,
-        `¿Me puedes asesorar con una cotización personalizada?`
+        `¿Me pueden asesorar con una cotización personalizada?`
       ];
       return `https://wa.me/${BOT_CONFIG.whatsappNumber}?text=${encodeURIComponent(lines.join("\n"))}`;
     }
@@ -2662,7 +2679,7 @@
       saveState();
       if (state.step > BOT_CONFIG.questions.length) {
         showTyping(() => {
-          addMessage("bot", "¡Excelente! Ya tengo todo lo que necesito para conectarte con " + BOT_CONFIG.humanName + ". Aquí está el resumen de tu solicitud:");
+          addMessage("bot", "¡Excelente! Ya tengo todo lo que necesito para conectarte con nuestro equipo. Aquí está el resumen de tu solicitud:");
           renderSummaryAndCTA();
         }, 800);
       } else {
@@ -2693,10 +2710,10 @@
         showTyping(() => {
           addMessage("bot", BOT_CONFIG.priceReply);
           const btn = document.createElement("button");
-          btn.className = "roman-wa-btn";
-          btn.innerHTML = `💬 Hablar con ${BOT_CONFIG.humanName}`;
+          btn.className = "asesor-wa-btn";
+          btn.innerHTML = `💬 Hablar con el equipo`;
           btn.addEventListener("click", () => window.open(buildWhatsAppLink(), "_blank"));
-          romanBody.appendChild(btn);
+          asesorBody.appendChild(btn);
           scrollBottom();
         }, 800);
         return;
@@ -2705,10 +2722,10 @@
         showTyping(() => {
           addMessage("bot", BOT_CONFIG.humanReply);
           const btn = document.createElement("button");
-          btn.className = "roman-wa-btn";
-          btn.innerHTML = `💬 Ir a WhatsApp con ${BOT_CONFIG.humanName}`;
+          btn.className = "asesor-wa-btn";
+          btn.innerHTML = `💬 Ir a WhatsApp con el equipo`;
           btn.addEventListener("click", () => window.open(buildWhatsAppLink(), "_blank"));
-          romanBody.appendChild(btn);
+          asesorBody.appendChild(btn);
           scrollBottom();
         }, 700);
         return;
@@ -2725,10 +2742,10 @@
           renderSummaryAndCTA();
         } else {
           const btn = document.createElement("button");
-          btn.className = "roman-option";
+          btn.className = "asesor-option";
           btn.textContent = "🔄 Iniciar asesoría desde el principio";
           btn.addEventListener("click", restartFlow);
-          romanBody.appendChild(btn);
+          asesorBody.appendChild(btn);
           scrollBottom();
         }
       }, 700);
@@ -2739,7 +2756,7 @@
       state.answers = {}; state.completed = false;
       state.history = [];
       saveState();
-      romanBody.innerHTML = "";
+      asesorBody.innerHTML = "";
       showTyping(() => {
         addMessage("bot", BOT_CONFIG.welcome);
         startFlow();
@@ -2747,7 +2764,7 @@
     }
 
     function renderFromState() {
-      romanBody.innerHTML = "";
+      asesorBody.innerHTML = "";
       if (!state.started) {
         addMessage("bot", BOT_CONFIG.welcome);
         startFlow();
@@ -2764,40 +2781,40 @@
     }
 
     function openChat() {
-      romanWindow.classList.add("roman-open");
+      asesorWindow.classList.add("asesor-open");
       state.open = true;
       saveState();
       renderFromState();
-      setTimeout(() => romanInput.focus(), 300);
+      setTimeout(() => asesorInput.focus(), 300);
     }
     function closeChat() {
-      romanWindow.classList.remove("roman-open");
+      asesorWindow.classList.remove("asesor-open");
       state.open = false;
       saveState();
     }
 
-    romanLauncher.addEventListener("click", () => { if (state.open) closeChat(); else openChat(); });
-    romanClose.addEventListener("click", closeChat);
-    romanSend.addEventListener("click", () => { const t = romanInput.value; romanInput.value = ""; handleFreeText(t); });
-    romanInput.addEventListener("keydown", (e) => {
+    asesorLauncher.addEventListener("click", () => { if (state.open) closeChat(); else openChat(); });
+    asesorClose.addEventListener("click", closeChat);
+    asesorSend.addEventListener("click", () => { const t = asesorInput.value; asesorInput.value = ""; handleFreeText(t); });
+    asesorInput.addEventListener("keydown", (e) => {
       if (e.key === "Enter" && !e.shiftKey) {
         e.preventDefault();
-        const t = romanInput.value; romanInput.value = "";
+        const t = asesorInput.value; asesorInput.value = "";
         handleFreeText(t);
       }
     });
 
-    const openRomanFromCTA = document.getElementById('openRomanFromCTA');
-    if (openRomanFromCTA) {
-      openRomanFromCTA.addEventListener('click', () => {
+    const openAsesorFromCTA = document.getElementById('openAsesorFromCTA');
+    if (openAsesorFromCTA) {
+      openAsesorFromCTA.addEventListener('click', () => {
         if (!state.open) openChat();
-        setTimeout(() => romanInput.focus(), 300);
+        setTimeout(() => asesorInput.focus(), 300);
       });
     }
 
     loadState();
     if (state.open) {
-      romanWindow.classList.add("roman-open");
+      asesorWindow.classList.add("asesor-open");
       renderFromState();
     }
   </script>
