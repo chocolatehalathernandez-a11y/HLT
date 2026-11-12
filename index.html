@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>HTL Importaciones | Maquinaria Profesional para Cacao y Chocolate</title>
+  <title>HLT Importaciones | Maquinaria Profesional para Cacao y Chocolate</title>
 
   <meta name="description"
     content="Maquinaria industrial para tostado, molienda, temperado, enrobing y alcalinización. Asesoría experta en Colombia.">
@@ -109,6 +109,7 @@
       --borde-suave: rgba(61, 46, 34, 0.08);
       --sombra-suave: 0 10px 30px -14px rgba(31, 42, 68, 0.12);
       --sombra-hover: 0 25px 45px -18px rgba(31, 42, 68, 0.2);
+      --sombra-logo: 0 4px 14px -4px rgba(31, 42, 68, 0.15);
     }
 
     * {
@@ -620,12 +621,82 @@
     }
 
     /* ============================================================
-       CATÁLOGO Y TARJETAS DE PRODUCTO
+       CATÁLOGO Y CARRUSEL DE PRODUCTOS
        ============================================================ */
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 2rem;
+    .carousel-wrapper {
+      position: relative;
+      width: 100%;
+      mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent);
+    }
+
+    /* Flechas del Carrusel */
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(201, 169, 97, 0.3);
+      box-shadow: 0 4px 15px rgba(31, 42, 68, 0.15);
+      color: var(--azul-profundo);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      transition: all 0.2s ease;
+      font-size: 1.2rem;
+    }
+
+    .carousel-btn:hover {
+      background: var(--crema);
+      color: var(--dorado-oscuro);
+      border-color: var(--dorado);
+      transform: translateY(-50%) scale(1.05);
+    }
+
+    .carousel-btn.prev {
+      left: -10px;
+    }
+
+    .carousel-btn.next {
+      right: -10px;
+    }
+
+    /* Ocultar flechas en móviles porque allí se usa el dedo */
+    @media (max-width: 768px) {
+      .carousel-btn {
+        display: none;
+      }
+    }
+
+    .product-carousel {
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: auto;
+      scroll-behavior: auto;
+      padding-bottom: 1rem;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      will-change: scroll-position;
+    }
+
+    .product-carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .product-carousel .product-card {
+      flex: 0 0 320px;
+      max-width: 340px;
+    }
+
+    @media (min-width: 900px) {
+      .product-carousel .product-card {
+        flex: 0 0 calc(33.333% - 1rem);
+      }
     }
 
     .product-card {
@@ -664,7 +735,6 @@
       transform: scaleX(1);
     }
 
-    /* NUEVO: Estilos para las imágenes de los productos */
     .product-image {
       width: 100%;
       height: 220px;
@@ -1877,7 +1947,6 @@
           <a href="#catalogo">Catálogo</a>
           <a href="#proceso">Bean-to-Bar</a>
           <a href="#nosotros">Nosotros</a>
-          <a href="#faq">FAQ</a>
           <a href="#contacto">Contacto</a>
         </div>
         <div class="nav-actions">
@@ -1941,8 +2010,8 @@
       <div class="section-head reveal">
         <span class="badge"><i class="fas fa-list"></i> Catálogo oficial</span>
         <h2>Maquinaria profesional para cada etapa</h2>
-        <p>Equipos en acero inoxidable 304 con control PLC. Agrega al carrito los modelos que necesitas y envía tu
-          cotización directo.</p>
+        <p>Desliza o usa las flechas para explorar. Equipos en acero inoxidable 304 con control PLC. Agrega al carrito
+          los modelos que necesitas y envía tu cotización.</p>
       </div>
 
       <!-- 1. Preparación del Grano -->
@@ -1950,32 +2019,36 @@
         <h3
           style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--azul-profundo); font-family: 'Playfair Display', serif;">
           <i class="fas fa-seedling" style="color: var(--dorado-oscuro);"></i> Preparación del Grano</h3>
-        <div class="product-grid">
-          <div class="product-card" data-prod='{"name":"Tostadores industriales","model":"Tostador"}'>
-            <img src="tostadores-industriales.png" alt="Tostadores industriales" class="product-image"
-              onerror="this.src='logo-hero.png';">
-            <h4>Tostadores industriales</h4>
-            <p>Tambor rotatorio con control electrónico de temperatura. Capacidades 8–100 kg/batch para desarrollo de
-              aroma y sabor.</p>
-            <div class="meta"><span>Acero 304</span><span>Control PLC</span></div>
-            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+        <div class="carousel-wrapper">
+          <button class="carousel-btn prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+          <div class="product-carousel">
+            <div class="product-card" data-prod='{"name":"Tostadores industriales","model":"Tostador"}'>
+              <img src="productos/tostadores-industriales.png" alt="Tostadores industriales" class="product-image"
+                onerror="this.src='logo-hero.png';">
+              <h4>Tostadores industriales</h4>
+              <p>Tambor rotatorio con control electrónico de temperatura. Capacidades 8–100 kg/batch para desarrollo de
+                aroma y sabor.</p>
+              <div class="meta"><span>Acero 304</span><span>Control PLC</span></div>
+              <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+            </div>
+            <div class="product-card" data-prod='{"name":"CW200 · Quebrador + Winnower","model":"CW200"}'>
+              <img src="productos/winnower-cw200.png" alt="CW200 Quebrador Winnower" class="product-image"
+                onerror="this.src='logo-hero.png';">
+              <h4>CW200 · Quebrador + Winnower</h4>
+              <p>Eficiencia de pelado >78%. Capacidad 80–200 kg/h. Separación precisa de cascarilla y nibs.</p>
+              <div class="meta"><span>47×98×140 cm</span><span>Motor 0.37 kW</span></div>
+              <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+            </div>
+            <div class="product-card" data-prod='{"name":"YQ200 · Descascarillador","model":"YQ200"}'>
+              <img src="productos/descascarillador-yq200.png" alt="YQ200 Descascarillador" class="product-image"
+                onerror="this.src='logo-hero.png';">
+              <h4>YQ200 · Descascarillador</h4>
+              <p>200 kg/h, eficiencia 98.5% en dos pasadas. Construcción íntegra en acero inoxidable 304.</p>
+              <div class="meta"><span>980×890×1280 mm</span><span>150 kg</span></div>
+              <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+            </div>
           </div>
-          <div class="product-card" data-prod='{"name":"CW200 · Quebrador + Winnower","model":"CW200"}'>
-            <img src="winnower-cw200.png" alt="CW200 Quebrador Winnower" class="product-image"
-              onerror="this.src='logo-hero.png';">
-            <h4>CW200 · Quebrador + Winnower</h4>
-            <p>Eficiencia de pelado >78%. Capacidad 80–200 kg/h. Separación precisa de cascarilla y nibs.</p>
-            <div class="meta"><span>47×98×140 cm</span><span>Motor 0.37 kW</span></div>
-            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
-          </div>
-          <div class="product-card" data-prod='{"name":"YQ200 · Descascarillador","model":"YQ200"}'>
-            <img src="descascarillador-yq200.png" alt="YQ200 Descascarillador" class="product-image"
-              onerror="this.src='logo-hero.png';">
-            <h4>YQ200 · Descascarillador</h4>
-            <p>200 kg/h, eficiencia 98.5% en dos pasadas. Construcción íntegra en acero inoxidable 304.</p>
-            <div class="meta"><span>980×890×1280 mm</span><span>150 kg</span></div>
-            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
-          </div>
+          <button class="carousel-btn next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
         </div>
       </div>
 
@@ -1984,43 +2057,47 @@
         <h3
           style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--azul-profundo); font-family: 'Playfair Display', serif;">
           <i class="fas fa-mortar-pestle" style="color: var(--dorado-oscuro);"></i> Molienda y Refinado</h3>
-        <div class="product-grid">
-          <div class="product-card"
-            data-prod='{"name":"SMJ07 / SMJ30 / SMJ60 · Molinos de piedra","model":"SMJ series"}'>
-            <img src="molinos-piedra-smj.png" alt="Molinos de piedra SMJ" class="product-image"
-              onerror="this.src='logo-hero.png';">
-            <h4>Molinos de piedra SMJ</h4>
-            <p>Granito natural, velocidad variable 0–80 rpm. Capacidades 7L (5 kg), 30L (25 kg), 60L (50 kg).</p>
-            <div class="meta"><span>Piedra natural</span><span>Acero 304</span></div>
-            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+        <div class="carousel-wrapper">
+          <button class="carousel-btn prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+          <div class="product-carousel">
+            <div class="product-card"
+              data-prod='{"name":"SMJ07 / SMJ30 / SMJ60 · Molinos de piedra","model":"SMJ series"}'>
+              <img src="productos/molinos-piedra-smj.png" alt="Molinos de piedra SMJ" class="product-image"
+                onerror="this.src='logo-hero.png';">
+              <h4>Molinos de piedra SMJ</h4>
+              <p>Granito natural, velocidad variable 0–80 rpm. Capacidades 7L (5 kg), 30L (25 kg), 60L (50 kg).</p>
+              <div class="meta"><span>Piedra natural</span><span>Acero 304</span></div>
+              <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+            </div>
+            <div class="product-card" data-prod='{"name":"B12 / B75 / BT180 · Ball Mill","model":"Ball Mill"}'>
+              <img src="productos/molino-bolas-b12-b75.png" alt="Ball Mill B12 B75 BT180" class="product-image"
+                onerror="this.src='logo-hero.png';">
+              <h4>Ball Mill B12 / B75 / BT180</h4>
+              <p>Refinado fino por debajo de 20 micras. Control de temperatura integrado. BT60/180 combina temperado +
+                molienda.</p>
+              <div class="meta"><span>75L / 60L</span><span>Alta eficiencia</span></div>
+              <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+            </div>
+            <div class="product-card" data-prod='{"name":"YYMJ03 / MJ10 · Pre-molino","model":"Pre-grinder"}'>
+              <img src="productos/pre-molino-yymj03.png" alt="Pre-molino YYMJ03 MJ10" class="product-image"
+                onerror="this.src='logo-hero.png';">
+              <h4>Pre-molino YYMJ03 / MJ10</h4>
+              <p>Pre-muele nibs hasta convertirlos en pasta antes del refinado. Formato compacto. Producción 3–20 kg/h.
+              </p>
+              <div class="meta"><span>550W</span><span>51×41×68 cm</span></div>
+              <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+            </div>
+            <div class="product-card" data-prod='{"name":"YML50 / 70 / 120L · Piedra industrial","model":"YML series"}'>
+              <img src="productos/molinos-piedra-yml.png" alt="YML50 YML70 YML120" class="product-image"
+                onerror="this.src='logo-hero.png';">
+              <h4>YML50 / 70 / 120L</h4>
+              <p>Serie industrial de molinos de piedra de alta capacidad. Para producción continua y fábricas de
+                chocolate.</p>
+              <div class="meta"><span>Industrial</span><span>Acero 304</span></div>
+              <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+            </div>
           </div>
-          <div class="product-card" data-prod='{"name":"B12 / B75 / BT180 · Ball Mill","model":"Ball Mill"}'>
-            <img src="molino-bolas-b12-b75.png" alt="Ball Mill B12 B75 BT180" class="product-image"
-              onerror="this.src='logo-hero.png';">
-            <h4>Ball Mill B12 / B75 / BT180</h4>
-            <p>Refinado fino por debajo de 20 micras. Control de temperatura integrado. BT60/180 combina temperado +
-              molienda.</p>
-            <div class="meta"><span>75L / 60L</span><span>Alta eficiencia</span></div>
-            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
-          </div>
-          <div class="product-card" data-prod='{"name":"YYMJ03 / MJ10 · Pre-molino","model":"Pre-grinder"}'>
-            <img src="pre-molino-yymj03.png" alt="Pre-molino YYMJ03 MJ10" class="product-image"
-              onerror="this.src='logo-hero.png';">
-            <h4>Pre-molino YYMJ03 / MJ10</h4>
-            <p>Pre-muele nibs hasta convertirlos en pasta antes del refinado. Formato compacto. Producción 3–20 kg/h.
-            </p>
-            <div class="meta"><span>550W</span><span>51×41×68 cm</span></div>
-            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
-          </div>
-          <div class="product-card" data-prod='{"name":"YML50 / 70 / 120L · Piedra industrial","model":"YML series"}'>
-            <img src="molinos-piedra-yml.png" alt="YML50 YML70 YML120" class="product-image"
-              onerror="this.src='logo-hero.png';">
-            <h4>YML50 / 70 / 120L</h4>
-            <p>Serie industrial de molinos de piedra de alta capacidad. Para producción continua y fábricas de
-              chocolate.</p>
-            <div class="meta"><span>Industrial</span><span>Acero 304</span></div>
-            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
-          </div>
+          <button class="carousel-btn next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
         </div>
       </div>
 
@@ -2029,41 +2106,45 @@
         <h3
           style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--azul-profundo); font-family: 'Playfair Display', serif;">
           <i class="fas fa-temperature-low" style="color: var(--dorado-oscuro);"></i> Temperado de Precisión</h3>
-        <div class="product-grid">
-          <div class="product-card" data-prod='{"name":"XT260 / XT80 · Temperador continuo","model":"XT series"}'>
-            <img src="temperador-xt260.png" alt="Temperador continuo XT260" class="product-image"
-              onerror="this.src='logo-hero.png';">
-            <h4>Temperador continuo XT260 / XT80</h4>
-            <p>XT260: 260–520 L/h. XT80: 80 L/h. Pantalla táctil, control PID, ahorro de agua >50%.</p>
-            <div class="meta"><span>Alta producción</span><span>Panel Táctil</span></div>
-            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+        <div class="carousel-wrapper">
+          <button class="carousel-btn prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+          <div class="product-carousel">
+            <div class="product-card" data-prod='{"name":"XT260 / XT80 · Temperador continuo","model":"XT series"}'>
+              <img src="productos/temperador-xt260.png" alt="Temperador continuo XT260" class="product-image"
+                onerror="this.src='logo-hero.png';">
+              <h4>Temperador continuo XT260 / XT80</h4>
+              <p>XT260: 260–520 L/h. XT80: 80 L/h. Pantalla táctil, control PID, ahorro de agua >50%.</p>
+              <div class="meta"><span>Alta producción</span><span>Panel Táctil</span></div>
+              <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+            </div>
+            <div class="product-card"
+              data-prod='{"name":"T30 / T60 / MT30 / MT60 · Temperadores batch","model":"T/MT series"}'>
+              <img src="productos/temperadores-t30-t60.png" alt="Temperadores Batch T30 T60" class="product-image"
+                onerror="this.src='logo-hero.png';">
+              <h4>Temperadores Batch T30 / T60 / MT30 / MT60</h4>
+              <p>Capacidades 30L y 60L. Control digital, agua forzada, agitador raspador. T30: 90 L/h. T60: 180 L/h.</p>
+              <div class="meta"><span>30L / 60L</span><span>Control Digital</span></div>
+              <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+            </div>
+            <div class="product-card" data-prod='{"name":"HT03 / HT05 · Sobremesa","model":"HT series"}'>
+              <img src="productos/sobremesa-ht03.png" alt="Sobremesa HT03 HT05" class="product-image"
+                onerror="this.src='logo-hero.png';">
+              <h4>Sobremesa HT03 / HT05</h4>
+              <p>Modelos compactos 4L y 7L para laboratorio y producción artesanal. 250–300W, acero inoxidable 304.</p>
+              <div class="meta"><span>4L / 7L</span><span>Sobremesa</span></div>
+              <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+            </div>
+            <div class="product-card" data-prod='{"name":"BWG75 / BWG150 / BWG500 · Tanques","model":"BWG series"}'>
+              <img src="productos/tanques-bwg.png" alt="Tanques BWG75 BWG150 BWG500" class="product-image"
+                onerror="this.src='logo-hero.png';">
+              <h4>Tanques BWG75 / BWG150 / BWG500</h4>
+              <p>Depósitos de fusión y conservación. Triple aislamiento, control digital. Modelos de 75, 150, 500, hasta
+                2000 L.</p>
+              <div class="meta"><span>Acero 304</span><span>Aislamiento</span></div>
+              <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+            </div>
           </div>
-          <div class="product-card"
-            data-prod='{"name":"T30 / T60 / MT30 / MT60 · Temperadores batch","model":"T/MT series"}'>
-            <img src="temperadores-t30-t60.png" alt="Temperadores Batch T30 T60" class="product-image"
-              onerror="this.src='logo-hero.png';">
-            <h4>Temperadores Batch T30 / T60 / MT30 / MT60</h4>
-            <p>Capacidades 30L y 60L. Control digital, agua forzada, agitador raspador. T30: 90 L/h. T60: 180 L/h.</p>
-            <div class="meta"><span>30L / 60L</span><span>Control Digital</span></div>
-            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
-          </div>
-          <div class="product-card" data-prod='{"name":"HT03 / HT05 · Sobremesa","model":"HT series"}'>
-            <img src="sobremesa-ht03.png" alt="Sobremesa HT03 HT05" class="product-image"
-              onerror="this.src='logo-hero.png';">
-            <h4>Sobremesa HT03 / HT05</h4>
-            <p>Modelos compactos 4L y 7L para laboratorio y producción artesanal. 250–300W, acero inoxidable 304.</p>
-            <div class="meta"><span>4L / 7L</span><span>Sobremesa</span></div>
-            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
-          </div>
-          <div class="product-card" data-prod='{"name":"BWG75 / BWG150 / BWG500 · Tanques","model":"BWG series"}'>
-            <img src="tanques-bwg.png" alt="Tanques BWG75 BWG150 BWG500" class="product-image"
-              onerror="this.src='logo-hero.png';">
-            <h4>Tanques BWG75 / BWG150 / BWG500</h4>
-            <p>Depósitos de fusión y conservación. Triple aislamiento, control digital. Modelos de 75, 150, 500, hasta
-              2000 L.</p>
-            <div class="meta"><span>Acero 304</span><span>Aislamiento</span></div>
-            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
-          </div>
+          <button class="carousel-btn next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
         </div>
       </div>
 
@@ -2072,41 +2153,46 @@
         <h3
           style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--azul-profundo); font-family: 'Playfair Display', serif;">
           <i class="fas fa-fill-drip" style="color: var(--dorado-oscuro);"></i> Enrobing, Moldeado y Enfriamiento</h3>
-        <div class="product-grid">
-          <div class="product-card" data-prod='{"name":"ER600 / ER1200 / ERG600 · Enrobers","model":"ER series"}'>
-            <img src="enrobers-er.png" alt="Enrobers ER600 ER1200" class="product-image"
-              onerror="this.src='logo-hero.png';">
-            <h4>Enrobers ER600 / ER1200 / ERG600</h4>
-            <p>Anchos variables 600–1600 mm. Recubrimiento superior, inferior y total. Bandeja extraíble. Velocidad 1–3
-              m/min.</p>
-            <div class="meta"><span>Acero 304</span><span>Recubrimiento total</span></div>
-            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+        <div class="carousel-wrapper">
+          <button class="carousel-btn prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+          <div class="product-carousel">
+            <div class="product-card" data-prod='{"name":"ER600 / ER1200 / ERG600 · Enrobers","model":"ER series"}'>
+              <img src="productos/enrobers-er.png" alt="Enrobers ER600 ER1200" class="product-image"
+                onerror="this.src='logo-hero.png';">
+              <h4>Enrobers ER600 / ER1200 / ERG600</h4>
+              <p>Anchos variables 600–1600 mm. Recubrimiento superior, inferior y total. Bandeja extraíble. Velocidad
+                1–3 m/min.</p>
+              <div class="meta"><span>Acero 304</span><span>Recubrimiento total</span></div>
+              <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+            </div>
+            <div class="product-card"
+              data-prod='{"name":"MM30 / MM60 / MM08 / MM15 · Moldeadoras","model":"MM series"}'>
+              <img src="productos/moldeadoras-mm.png" alt="Moldeadoras MM30 MM60" class="product-image"
+                onerror="this.src='logo-hero.png';">
+              <h4>Moldeadoras MM30 / MM60 / MM08 / MM15</h4>
+              <p>Para tabletas, bombones y barras. Control digital de temperatura. Capacidades 8L, 15L, 30L y 60L.</p>
+              <div class="meta"><span>Control digital</span><span>Alta producción</span></div>
+              <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+            </div>
+            <div class="product-card" data-prod='{"name":"Túneles de enfriamiento","model":"Cooling Tunnel"}'>
+              <img src="productos/tunel-enfriamiento.png" alt="Túneles de Enfriamiento" class="product-image"
+                onerror="this.src='logo-hero.png';">
+              <h4>Túneles de Enfriamiento</h4>
+              <p>Longitudes 4.7m, 12m y hasta 35m. Aislamiento sándwich 20mm. Temperatura 5–10°C. Compresores 3P a 25P.
+              </p>
+              <div class="meta"><span>0.5–5 m/min</span><span>Aislamiento 20mm</span></div>
+              <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+            </div>
+            <div class="product-card" data-prod='{"name":"TE400 · Temperado + Coating","model":"TE400"}'>
+              <img src="productos/temperado-coating-te400.png" alt="TE400 Temperado Coating" class="product-image"
+                onerror="this.src='logo-hero.png';">
+              <h4>TE400 · Temperado + Coating</h4>
+              <p>Sistema integrado para temperado y recubrimiento continuo. Ancho 400 mm, velocidad 1–3 m/min.</p>
+              <div class="meta"><span>Integrado</span><span>Fácil mantenimiento</span></div>
+              <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+            </div>
           </div>
-          <div class="product-card" data-prod='{"name":"MM30 / MM60 / MM08 / MM15 · Moldeadoras","model":"MM series"}'>
-            <img src="moldeadoras-mm.png" alt="Moldeadoras MM30 MM60" class="product-image"
-              onerror="this.src='logo-hero.png';">
-            <h4>Moldeadoras MM30 / MM60 / MM08 / MM15</h4>
-            <p>Para tabletas, bombones y barras. Control digital de temperatura. Capacidades 8L, 15L, 30L y 60L.</p>
-            <div class="meta"><span>Control digital</span><span>Alta producción</span></div>
-            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
-          </div>
-          <div class="product-card" data-prod='{"name":"Túneles de enfriamiento","model":"Cooling Tunnel"}'>
-            <img src="tunel-enfriamiento.png" alt="Túneles de Enfriamiento" class="product-image"
-              onerror="this.src='logo-hero.png';">
-            <h4>Túneles de Enfriamiento</h4>
-            <p>Longitudes 4.7m, 12m y hasta 35m. Aislamiento sándwich 20mm. Temperatura 5–10°C. Compresores 3P a 25P.
-            </p>
-            <div class="meta"><span>0.5–5 m/min</span><span>Aislamiento 20mm</span></div>
-            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
-          </div>
-          <div class="product-card" data-prod='{"name":"TE400 · Temperado + Coating","model":"TE400"}'>
-            <img src="temperado-coating-te400.png" alt="TE400 Temperado Coating" class="product-image"
-              onerror="this.src='logo-hero.png';">
-            <h4>TE400 · Temperado + Coating</h4>
-            <p>Sistema integrado para temperado y recubrimiento continuo. Ancho 400 mm, velocidad 1–3 m/min.</p>
-            <div class="meta"><span>Integrado</span><span>Fácil mantenimiento</span></div>
-            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
-          </div>
+          <button class="carousel-btn next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
         </div>
       </div>
 
@@ -2116,58 +2202,63 @@
           style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--azul-profundo); font-family: 'Playfair Display', serif;">
           <i class="fas fa-flask" style="color: var(--dorado-oscuro);"></i> Tecnología Patentada y Equipos Especiales
         </h3>
-        <div class="product-grid">
-          <div class="product-card" data-prod='{"name":"Impregnated Machine (patente)","model":"Impregnated"}'
-            style="border-left: 3px solid var(--dorado);">
-            <img src="maquina-impregnacion.png" alt="Máquina de Impregnación" class="product-image"
-              onerror="this.src='logo-hero.png';">
-            <h4>Impregnated Machine</h4>
-            <p>Patente CN2016214783393. Infiltra chocolate en snacks porosos. Producto final no se derrite al tacto.
-              Ideal para clima tropical.</p>
-            <div class="meta"><span>Patente</span><span>Exclusiva</span></div>
-            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+        <div class="carousel-wrapper">
+          <button class="carousel-btn prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+          <div class="product-carousel">
+            <div class="product-card" data-prod='{"name":"Impregnated Machine (patente)","model":"Impregnated"}'
+              style="border-left: 3px solid var(--dorado);">
+              <img src="productos/maquina-impregnacion.png" alt="Máquina de Impregnación" class="product-image"
+                onerror="this.src='logo-hero.png';">
+              <h4>Impregnated Machine</h4>
+              <p>Patente CN2016214783393. Infiltra chocolate en snacks porosos. Producto final no se derrite al tacto.
+                Ideal para clima tropical.</p>
+              <div class="meta"><span>Patente</span><span>Exclusiva</span></div>
+              <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+            </div>
+            <div class="product-card" data-prod='{"name":"6YY-150 · Prensa manteca de cacao","model":"6YY-150"}'>
+              <img src="productos/prensa-manteca-6yy.png" alt="Prensa hidráulica 6YY-150" class="product-image"
+                onerror="this.src='logo-hero.png';">
+              <h4>Prensa hidráulica 6YY-150</h4>
+              <p>Extracción de manteca de pasta de cacao. 150 kg/h, presión máxima de 55 MPa. Acero inoxidable.</p>
+              <div class="meta"><span>150 kg/h</span><span>55 MPa</span></div>
+              <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+            </div>
+            <div class="product-card"
+              data-prod='{"name":"SEM-600 / SEM-80 / SEM-60 · Envasadoras","model":"SEM series"}'>
+              <img src="productos/envasadoras-sem.png" alt="Envasadoras SEM-600" class="product-image"
+                onerror="this.src='logo-hero.png';">
+              <h4>Envasadoras SEM-600 / SEM-80 / SEM-60</h4>
+              <p>Llenado de líquidos y pastas. 4–15 bolsas/min, control PLC. SEM-80 y SEM-60 para chocolate sólido.</p>
+              <div class="meta"><span>Control PLC</span><span>Alta eficiencia</span></div>
+              <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+            </div>
+            <div class="product-card" data-prod='{"name":"PG-3 / PG-30 · Pulidoras","model":"PG series"}'>
+              <img src="productos/pulidoras-pg.png" alt="Pulidoras PG-3 PG-30" class="product-image"
+                onerror="this.src='logo-hero.png';">
+              <h4>Pulidoras PG-3 / PG-30</h4>
+              <p>Confitado y pulido de grageas y frutos secos. Velocidad variable, control de temperatura. Capacidades 3
+                kg y 30 kg.</p>
+              <div class="meta"><span>3 kg / 30 kg</span><span>Velocidad variable</span></div>
+              <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+            </div>
+            <div class="product-card" data-prod='{"name":"PQ01 · Fuente de chocolate","model":"PQ01"}'>
+              <img src="productos/fuente-chocolate-pq01.png" alt="Fuente de chocolate PQ01" class="product-image"
+                onerror="this.src='logo-hero.png';">
+              <h4>Fuente de chocolate PQ01</h4>
+              <p>20 litros, monofásico, 0.6 kW. Cuerpo en acero inoxidable 304 de grado alimenticio.</p>
+              <div class="meta"><span>20 L</span><span>Acero 304</span></div>
+              <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+            </div>
+            <div class="product-card" data-prod='{"name":"Extrusora industrial JCJ300","model":"Extruder"}'>
+              <img src="productos/extrusora-jcj300.png" alt="Extrusora industrial JCJ300" class="product-image"
+                onerror="this.src='logo-hero.png';">
+              <h4>Extrusora industrial JCJ300</h4>
+              <p>300 kg/hora. Control PLC. Diseño higiénico para fácil limpieza. Formas personalizables.</p>
+              <div class="meta"><span>300 kg/h</span><span>Control PLC</span></div>
+              <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
+            </div>
           </div>
-          <div class="product-card" data-prod='{"name":"6YY-150 · Prensa manteca de cacao","model":"6YY-150"}'>
-            <img src="prensa-manteca-6yy.png" alt="Prensa hidráulica 6YY-150" class="product-image"
-              onerror="this.src='logo-hero.png';">
-            <h4>Prensa hidráulica 6YY-150</h4>
-            <p>Extracción de manteca de pasta de cacao. 150 kg/h, presión máxima de 55 MPa. Acero inoxidable.</p>
-            <div class="meta"><span>150 kg/h</span><span>55 MPa</span></div>
-            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
-          </div>
-          <div class="product-card" data-prod='{"name":"SEM-600 / SEM-80 / SEM-60 · Envasadoras","model":"SEM series"}'>
-            <img src="envasadoras-sem.png" alt="Envasadoras SEM-600" class="product-image"
-              onerror="this.src='logo-hero.png';">
-            <h4>Envasadoras SEM-600 / SEM-80 / SEM-60</h4>
-            <p>Llenado de líquidos y pastas. 4–15 bolsas/min, control PLC. SEM-80 y SEM-60 para chocolate sólido.</p>
-            <div class="meta"><span>Control PLC</span><span>Alta eficiencia</span></div>
-            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
-          </div>
-          <div class="product-card" data-prod='{"name":"PG-3 / PG-30 · Pulidoras","model":"PG series"}'>
-            <img src="pulidoras-pg.png" alt="Pulidoras PG-3 PG-30" class="product-image"
-              onerror="this.src='logo-hero.png';">
-            <h4>Pulidoras PG-3 / PG-30</h4>
-            <p>Confitado y pulido de grageas y frutos secos. Velocidad variable, control de temperatura. Capacidades 3
-              kg y 30 kg.</p>
-            <div class="meta"><span>3 kg / 30 kg</span><span>Velocidad variable</span></div>
-            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
-          </div>
-          <div class="product-card" data-prod='{"name":"PQ01 · Fuente de chocolate","model":"PQ01"}'>
-            <img src="fuente-chocolate-pq01.png" alt="Fuente de chocolate PQ01" class="product-image"
-              onerror="this.src='logo-hero.png';">
-            <h4>Fuente de chocolate PQ01</h4>
-            <p>20 litros, monofásico, 0.6 kW. Cuerpo en acero inoxidable 304 de grado alimenticio.</p>
-            <div class="meta"><span>20 L</span><span>Acero 304</span></div>
-            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
-          </div>
-          <div class="product-card" data-prod='{"name":"Extrusora industrial JCJ300","model":"Extruder"}'>
-            <img src="extrusora-jcj300.png" alt="Extrusora industrial JCJ300" class="product-image"
-              onerror="this.src='logo-hero.png';">
-            <h4>Extrusora industrial JCJ300</h4>
-            <p>300 kg/hora. Control PLC. Diseño higiénico para fácil limpieza. Formas personalizables.</p>
-            <div class="meta"><span>300 kg/h</span><span>Control PLC</span></div>
-            <button class="btn-add add-to-cart"><i class="fas fa-plus"></i> Agregar</button>
-          </div>
+          <button class="carousel-btn next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
         </div>
       </div>
     </div>
@@ -2235,97 +2326,6 @@
       </div>
     </div>
   </section>
-
-  <!-- FAQ -->
-  <section id="faq" class="section" style="background: var(--blanco);">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="badge"><i class="fas fa-question-circle"></i> Resolvemos tus dudas</span>
-        <h2>Preguntas Frecuentes sobre Maquinaria para Cacao</h2>
-        <p>Respuestas directas para que tomes la mejor decisión en tu proyecto de chocolatería.</p>
-      </div>
-      <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem;">
-
-        <div style="border-bottom: 1px solid var(--borde-suave); padding-bottom: 1rem;">
-          <h3
-            style="font-size: 1.1rem; font-weight: 700; color: var(--azul-profundo); margin-bottom: 0.5rem; font-family: 'Playfair Display', serif;">
-            ¿Qué es una línea Bean-to-Bar y qué incluye?</h3>
-          <p style="color: var(--cacao-suave); font-size: 0.95rem;">Una línea Bean-to-Bar es un conjunto integrado de
-            máquinas que transforman el grano de cacao en barra de chocolate. Incluye tostador, descascarillador
-            (winnower), molino (de piedra o bolas), temperadora, moldeadora y túnel de enfriamiento. HLT Importaciones
-            ofrece estas líneas completas con equipos de acero inoxidable 304.</p>
-        </div>
-
-        <div style="border-bottom: 1px solid var(--borde-suave); padding-bottom: 1rem;">
-          <h3
-            style="font-size: 1.1rem; font-weight: 700; color: var(--azul-profundo); margin-bottom: 0.5rem; font-family: 'Playfair Display', serif;">
-            ¿Cuál es la capacidad de producción de los equipos?</h3>
-          <p style="color: var(--cacao-suave); font-size: 0.95rem;">La maquinaria cubre desde laboratorios artesanales
-            (desde 5 kg por lote con molinos SMJ07) hasta plantas industriales (más de 600 kg/día con líneas continuas y
-            túneles de enfriamiento de 35 metros). Te ayudamos a dimensionar la línea según tu volumen proyectado.</p>
-        </div>
-
-        <div style="border-bottom: 1px solid var(--borde-suave); padding-bottom: 1rem;">
-          <h3
-            style="font-size: 1.1rem; font-weight: 700; color: var(--azul-profundo); margin-bottom: 0.5rem; font-family: 'Playfair Display', serif;">
-            ¿Ofrecen asesoría técnica y soporte postventa en Colombia?</h3>
-          <p style="color: var(--cacao-suave); font-size: 0.95rem;">Sí. HLT Importaciones cuenta con un equipo de
-            asesores técnicos especialistas en automatización de líneas de chocolate. La asesoría incluye layout de
-            planta, puesta en marcha, capacitación operativa y soporte para repuestos originales.</p>
-        </div>
-
-        <div>
-          <h3
-            style="font-size: 1.1rem; font-weight: 700; color: var(--azul-profundo); margin-bottom: 0.5rem; font-family: 'Playfair Display', serif;">
-            ¿Cómo solicito una cotización de maquinaria para chocolate?</h3>
-          <p style="color: var(--cacao-suave); font-size: 0.95rem;">Puedes solicitar una cotización personalizada
-            directamente por WhatsApp con nuestro equipo o utilizando el asistente virtual en esta página. Él te guiará
-            con 5 preguntas para entender tu proyecto y enviarte una propuesta técnica detallada.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Qué es una línea Bean-to-Bar y qué incluye?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Una línea Bean-to-Bar es un conjunto integrado de máquinas que transforman el grano de cacao en barra de chocolate. Incluye tostador, descascarillador, molino, temperadora, moldeadora y túnel de enfriamiento. HLT Importaciones ofrece estas líneas completas con equipos de acero inoxidable 304."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cuál es la capacidad de producción de los equipos?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La maquinaria cubre desde laboratorios artesanales (desde 5 kg por lote) hasta plantas industriales (más de 600 kg/día con líneas continuas y túneles de 35 metros). El equipo técnico ayuda a dimensionar la línea según el volumen proyectado."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Ofrecen asesoría técnica y soporte postventa en Colombia?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí. HLT Importaciones cuenta con un equipo de asesores técnicos especialistas en automatización de líneas de chocolate. La asesoría incluye layout de planta, puesta en marcha, capacitación operativa y soporte para repuestos originales."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cómo solicito una cotización de maquinaria para chocolate?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Puedes solicitar una cotización personalizada directamente por WhatsApp o utilizando el asistente virtual en la página web."
-      }
-    }
-  ]
-}
-</script>
 
   <!-- CTA FINAL -->
   <section id="contacto" class="section">
@@ -2398,7 +2398,7 @@
       });
     });
 
-    // CARRITO
+    // CARRITO CON EVENT DELEGATION
     let cart = [];
     function saveCart() { localStorage.setItem('hltCart', JSON.stringify(cart)); updateCartUI(); }
     function loadCart() { const stored = localStorage.getItem('hltCart'); if (stored) cart = JSON.parse(stored); updateCartUI(); }
@@ -2413,9 +2413,6 @@
       if (existing) { existing.quantity += 1; }
       else { cart.push({ name: productData.name, model: productData.model, quantity: 1 }); }
       saveCart();
-      const btn = document.activeElement;
-      if (btn) btn.style.transform = 'scale(0.95)';
-      setTimeout(() => { if (btn) btn.style.transform = ''; }, 150);
     }
     function removeFromCart(index) { cart.splice(index, 1); saveCart(); }
     function updateQuantity(index, delta) {
@@ -2453,13 +2450,22 @@
       message += "%0AGracias, espero su cotización personalizada.";
       window.open(`https://wa.me/573112581129?text=${message}`, '_blank');
     }
-    document.querySelectorAll('.add-to-cart').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const card = btn.closest('.product-card');
+
+    // Delegación de eventos: Escucha los clics en cualquier parte del documento
+    document.addEventListener('click', function (e) {
+      const addBtn = e.target.closest('.add-to-cart');
+      if (addBtn) {
+        const card = addBtn.closest('.product-card');
         const prodAttr = card.getAttribute('data-prod');
-        if (prodAttr) addToCart(JSON.parse(prodAttr));
-      });
+        if (prodAttr) {
+          addToCart(JSON.parse(prodAttr));
+          // Animación sutil al agregar
+          addBtn.style.transform = 'scale(0.95)';
+          setTimeout(() => { addBtn.style.transform = ''; }, 150);
+        }
+      }
     });
+
     const cartModal = document.getElementById('cartModal');
     const cartOverlay = document.getElementById('cartOverlay');
     const cartIcon = document.getElementById('cartIcon');
@@ -2471,6 +2477,111 @@
     cartOverlay.addEventListener('click', closeCart);
     document.getElementById('sendWhatsappCartBtn').addEventListener('click', sendCartToWhatsApp);
     loadCart();
+
+    // CARRUSEL: ROLLING INFINITO CON TELEPORTACIÓN (REANUDACIÓN RÁPIDA)
+    document.addEventListener("DOMContentLoaded", function () {
+      const carousels = document.querySelectorAll('.product-carousel');
+
+      carousels.forEach(carousel => {
+        // 1. Duplicar elementos para crear el bucle infinito
+        const originalCards = Array.from(carousel.children);
+        originalCards.forEach(card => {
+          carousel.appendChild(card.cloneNode(true));
+        });
+
+        let isPaused = false;
+        let resumeTimeout;
+        let rafId;
+        const speed = 1.5; // Pixeles por frame (velocidad constante)
+
+        // 2. Animación de auto-scroll
+        const autoScroll = () => {
+          if (!isPaused) {
+            carousel.scrollLeft += speed;
+
+            // Si llegamos a la mitad (inicio de los clones), teletransportamos al inicio real (0)
+            const halfWidth = carousel.scrollWidth / 2;
+            if (carousel.scrollLeft >= halfWidth) {
+              carousel.scrollLeft = 0;
+            }
+          }
+          rafId = requestAnimationFrame(autoScroll);
+        };
+
+        // Iniciar animación
+        rafId = requestAnimationFrame(autoScroll);
+
+        // 3. Lógica de Pausa y Reanudación (1.25 segundos)
+        const pause = () => {
+          isPaused = true;
+          clearTimeout(resumeTimeout);
+        };
+
+        const resume = () => {
+          clearTimeout(resumeTimeout);
+          resumeTimeout = setTimeout(() => {
+            isPaused = false;
+          }, 1250); // 1.25 segundos exactos
+        };
+
+        // 4. Detección de interacción del usuario
+        carousel.addEventListener('mouseenter', pause);
+        carousel.addEventListener('mouseleave', resume);
+
+        carousel.addEventListener('touchstart', pause, { passive: true });
+        carousel.addEventListener('touchend', resume);
+
+        let wheelTimeout;
+        carousel.addEventListener('wheel', () => {
+          pause();
+          clearTimeout(wheelTimeout);
+          wheelTimeout = setTimeout(resume, 1250);
+        }, { passive: true });
+
+        // 5. Lógica de las Flechas con Teletransportación
+        const wrapper = carousel.closest('.carousel-wrapper');
+        const prevBtn = wrapper.querySelector('.carousel-btn.prev');
+        const nextBtn = wrapper.querySelector('.carousel-btn.next');
+
+        const cardWidth = carousel.querySelector('.product-card')?.offsetWidth || 320;
+        const gap = 24;
+        const scrollAmount = cardWidth + gap;
+
+        if (prevBtn && nextBtn) {
+          prevBtn.addEventListener('click', () => {
+            pause();
+            const halfWidth = carousel.scrollWidth / 2;
+
+            // Si estamos al principio (0) y vamos hacia atrás, teletransportamos a la mitad
+            if (carousel.scrollLeft <= 0) {
+              carousel.style.scrollBehavior = 'auto';
+              carousel.scrollLeft = halfWidth;
+              carousel.style.scrollBehavior = 'smooth';
+            }
+            carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            resume();
+          });
+
+          nextBtn.addEventListener('click', () => {
+            pause();
+            const halfWidth = carousel.scrollWidth / 2;
+
+            // Si estamos a punto de llegar a los clones, teletransportamos al inicio
+            if (carousel.scrollLeft >= halfWidth - scrollAmount) {
+              carousel.style.scrollBehavior = 'auto';
+              carousel.scrollLeft = 0;
+              carousel.style.scrollBehavior = 'smooth';
+              requestAnimationFrame(() => {
+                carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+              });
+            } else {
+              carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+            resume();
+          });
+        }
+      });
+    });
   </script>
 
   <script>
@@ -2485,7 +2596,7 @@
       whatsappNumber: "573112581129",
       whatsappDisplay: "+57 311 258 1129",
       humanName: "Equipo HLT",
-      welcome: "¡Hola! Soy el Asistente Virtual de HLT Importaciones. Estoy aquí para ayudarte a identificar la mejor solución en maquinaria para chocolatería. Te haré 5 preguntas rápidas y te conectaré con nuestro equipo de especialistas. 🍫",
+      welcome: "¡Hola! Soy el Asistente Virtual de HTL Importaciones. Estoy aquí para ayudarte a identificar la mejor solución en maquinaria para chocolatería. Te haré 5 preguntas rápidas y te conectaré con nuestro equipo de especialistas. 🍫",
       fallback: "No entendí bien. ¿Podrías elegir una de las opciones o contarme un poco más?",
       priceReply: "Los precios dependen de la configuración y capacidad. Te conecto con nuestro equipo para una cotización precisa según tu proyecto. 📋",
       humanReply: "Perfecto, te conecto con el equipo ahora mismo.",
